@@ -23,7 +23,31 @@ import {
   navbarItemHover,
   eventsNew,
   brandMobileView,
+  downArrow,
+  menuT,
+  toggleFirstRow,
+  closeMenu,
+  navItemListPhoneView,
+  navItemPhoneView,
+  navtailwindstyles,
+  logo,
+  navItemDeskViewWrapper,
+  deskViewNavItems,
+  navItemListSubList,
+  navItemListInNavbarDesk, 
+  achievementSubList,
+  brandsEventSubList,
+  brandImg,
+  searchInputIcon,
+  searIconDesk,
+  searchInputDesk,
+  searchWrapperMScreen,
+  searchIconMScreen,
+  socialMediaWrapper,
+  burgerMenu,
+  flexCenter
 } from "./tailwindstyles";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const { IFS, SEDEX, KOSHER, USDA, FDA, ORGANIC, HALAL, KSTAR, FSSC } = logos;
@@ -37,6 +61,7 @@ const Header = () => {
   const [brand, setBrand] = useState(false);
   const [newsState, setNews] = useState(false);
   const [search, setSearch] = useState("");
+  const router = useRouter()
 
   const closeMenues = () => {
     setProduct(false);
@@ -48,20 +73,24 @@ const Header = () => {
     setMenuToggle(false);
   };
 
+  const handleSearch = () => {
+    router.push(`/${search}`)
+  }
+
   return (
     <>
       {menuToggle ? (
-        <div className="w-full block absolute bg-white md:hidden px-6 py-4 shadow-lg text-gray-500 z-50 ">
-          <div className="flex w-full justify-between p-2 hover:text-red-300 ">
+        <div className={menuT}>
+          <div className={toggleFirstRow}>
             <div
               id="PRODUCTS"
               onClick={() => setProduct(!product)}
-              className="cursor-pointer"
+              className={navItemPhoneView}
             >
               PRODUCTS BULK/FOOD SERVICE
             </div>
             <button
-              className="hover:shadow p-2 rounded transition duration-300 ease-in-out hover:text-red-300"
+              className={closeMenu}
               onClick={() => closeMenues()}
             >
               <IoMdClose />
@@ -104,8 +133,8 @@ const Header = () => {
             </div>
           )}
 
-          <div className="flex p-2 hover:text-red-300">
-            <div onClick={() => setBulk(!bulk)} className="cursor-pointer">
+          <div className={navItemListPhoneView}>
+            <div onClick={() => setBulk(!bulk)} className={navItemPhoneView}>
               PRODUCTS PRIVATE LABLE
             </div>
           </div>
@@ -147,10 +176,10 @@ const Header = () => {
             </div>
           )}
 
-          <div className="flex p-2 hover:text-red-300 text-gray-500">
+          <div className={navItemListPhoneView}>
             <div
               onClick={() => setAchievement(!achievement)}
-              className="cursor-pointer"
+              className={navItemPhoneView}
             >
               ACHIEVEMENTS
             </div>
@@ -235,8 +264,8 @@ const Header = () => {
             </div>
           )}
 
-          <div className="flex p-2 hover:text-red-300">
-            <div onClick={() => setBrand(!brand)} className="cursor-pointer">
+          <div className={navItemListPhoneView}>
+            <div onClick={() => setBrand(!brand)} className={navItemPhoneView}>
               BRANDS
             </div>
           </div>
@@ -244,30 +273,30 @@ const Header = () => {
           {brand && (
             <div className="shadow-inner">
               <Link href={`#`} className={brandMobileView}>
-                <Image src={majestic} alt="majestic" className="w-16 mx-auto" />
+                <Image src={majestic} alt="majestic" className={brandImg} />
                 MAJESTIC
               </Link>
               <Link href={`#`} className={brandMobileView}>
                 <Image
                   src={peachFull}
                   alt="peachFull"
-                  className="w-16 mx-auto"
+                  className={brandImg}
                 />
                 PEACH FULL
               </Link>
               <Link href={`#`} className={brandMobileView}>
-                <Image src={kindKids} alt="kindKids" className="w-16 mx-auto" />
+                <Image src={kindKids} alt="kindKids" className={brandImg} />
                 KIND KIDS
               </Link>
               <Link href={`#`} className={brandMobileView}>
-                <Image src={queen} alt="queen" className="w-16 mx-auto" />
+                <Image src={queen} alt="queen" className={brandImg} />
                 QUEEN DIAMOND
               </Link>
             </div>
           )}
 
-          <div className="flex p-2 hover:text-red-300">
-            <div onClick={() => setNews(!newsState)} className="cursor-pointer">
+          <div className={navItemListPhoneView}>
+            <div onClick={() => setNews(!newsState)} className={navItemPhoneView}>
               NEWS AND EVENTS
             </div>
           </div>
@@ -285,8 +314,8 @@ const Header = () => {
             </div>
           )}
 
-          <div className="flex p-2 hover:text-red-300 ">
-            <div onClick={() => setAbout(!about)} className="cursor-pointer">
+          <div className={navItemListPhoneView}>
+            <div onClick={() => setAbout(!about)} className={navItemPhoneView}>
               ABOUT US
             </div>
           </div>
@@ -328,27 +357,26 @@ const Header = () => {
         </div>
       ) : null}
 
-      <nav className="flex py-1 px-6 items-center shadow-md md:fixed top-0 left-0 right-0 bg-white z-50 md:mb-[150px]">
+      <nav className={navtailwindstyles}>
         <Link href={site}>
-          <Image src={Logo} alt="AHT FOODS" className="w-20 md:w-36 lg:w-40" />
+          <Image src={Logo} alt="AHT FOODS" className={logo} />
         </Link>
 
         <div
-          className="justify-between md:justify-start w-11/12 md:h-24 bg-gradient-to-t from-[#7F0019] to-[#8A0019] 
-                rounded-md md:rounded-l lg:rounded-2xl flex flex-row items-center p-4 border"
+          className={navItemDeskViewWrapper}
         >
           {/* NAVIGATION LINKS */}
-          <div className=" w-7/12 md:w-10/12 hidden md:flex flex-row items-center text-white text-small lg:text-base ">
+          <div className={navItemListInNavbarDesk}>
             <div className={navbarItemHover}>
-              <div className="flex-col items-center">
-                <div className="flex items-center w-full">
+              <div className={flexCenter}>
+                <div className={deskViewNavItems}>
                   {" "}
                   PRODUCTS{" "}
-                  <span className="hidden lg:block text-xs ml-2"> ⯆ </span>
+                  <span className={downArrow}> ⯆ </span>
                 </div>
                 <div className="text-xs">BULK/FOOD SERVICE</div>
               </div>
-              <div className="invisible text-xs absolute z-50 flex w-[150px] flex-col bg-white py-1 px-4 text-gray-800 shadow-xl group-hover:visible group-hover: w-48 rounded">
+              <div className={navItemListSubList}>
                 <Link
                   href={`${site}${products}/1&type=bulk`}
                   className={productStyle}
@@ -383,15 +411,15 @@ const Header = () => {
             </div>
 
             <div className={navbarItemHover}>
-              <div className="flex-col items-center">
-                <div className="flex items-center w-fit">
+              <div className={flexCenter}>
+                <div className={deskViewNavItems}>
                   {" "}
                   PRODUCTS{" "}
-                  <span className="hidden lg:block text-xs ml-2"> ⯆ </span>
+                  <span className={downArrow}> ⯆ </span>
                 </div>
                 <div className="text-xs">PRIVATE LABEL</div>
               </div>
-              <div className="invisible text-xs absolute z-50 flex w-[150px] flex-col bg-white py-1 px-4 text-gray-800 shadow-xl group-hover:visible group-hover: w-48 rounded">
+              <div className={navItemListSubList}>
                 <Link
                   href={`${site}${products}/1&type=retail`}
                   className={productStyle}
@@ -426,11 +454,11 @@ const Header = () => {
             </div>
 
             <div className="m-2.5 group relative cursor-pointer  ">
-              <div className="flex items-center ">
+              <div className={deskViewNavItems}>
                 ACHIEVEMENTS{" "}
-                <span className="hidden lg:block text-xs ml-2"> ⯆ </span>
+                <span className={downArrow}> ⯆ </span>
               </div>
-              <div className="h-[600px]  invisible items-start text-xs absolute z-50 flex w-[300px] flex-col bg-white  p-4 text-gray-800 shadow-xl group-hover:visible group-hover: w-56 rounded">
+              <div className={achievementSubList}>
                 <Link href="#" className={achievementStyle}>
                   <Image
                     src={IFS}
@@ -503,15 +531,15 @@ const Header = () => {
             </div>
 
             <div className={navbarItemHover}>
-              <div className="flex items-center">
-                BRANDS <span className="hidden lg:block text-xs ml-2"> ⯆ </span>
+              <div className={deskViewNavItems}>
+                BRANDS <span className={downArrow}> ⯆ </span>
               </div>
-              <div className="invisible text-xs absolute z-50 flex w-fit flex-col bg-white py-1 px-6 text-gray-800 shadow-xl group-hover:visible group-hover: w-48 rounded">
+              <div className={brandsEventSubList}>
                 <Link href={`#`} className={brandMobileView}>
                   <Image
                     src={majestic}
                     alt="majestic"
-                    className="w-16 mx-auto"
+                    className={brandImg}
                   />
                   MAJESTIC
                 </Link>
@@ -519,7 +547,7 @@ const Header = () => {
                   <Image
                     src={peachFull}
                     alt="peachFull"
-                    className="w-16 mx-auto"
+                    className={brandImg}
                   />
                   PEACH FULL
                 </Link>
@@ -527,23 +555,23 @@ const Header = () => {
                   <Image
                     src={kindKids}
                     alt="kindKids"
-                    className="w-16 mx-auto"
+                    className={brandImg}
                   />
                   KIND KIDS
                 </Link>
                 <Link href={`#`} className={brandMobileView}>
-                  <Image src={queen} alt="queen" className="w-16 mx-auto" />
+                  <Image src={queen} alt="queen" className={brandImg} />
                   QUEEN DIAMOND
                 </Link>
               </div>
             </div>
 
             <div className={navbarItemHover}>
-              <div className="flex items-center text-xs lg:text-base">
+              <div className={deskViewNavItems}>
                 EVENTS & NEWS{" "}
-                <span className="hidden lg:block text-xs ml-2"> ⯆ </span>
+                <span className={downArrow}> ⯆ </span>
               </div>
-              <div className="invisible text-xs absolute z-50 flex w-full flex-col bg-white py-1 px-4 text-gray-800 shadow-xl group-hover:visible group-hover: w-48 rounded">
+              <div className={brandsEventSubList}>
                 <Link href={`${site}eventNewsPage`} className={productStyle}>
                   Events
                 </Link>
@@ -555,11 +583,11 @@ const Header = () => {
             </div>
 
             <div className={navbarItemHover}>
-              <div className="flex items-center text-xs lg:text-base ">
+              <div className={deskViewNavItems}>
                 ABOUT US{" "}
-                <span className="hidden lg:block text-sm ml-2"> ⯆ </span>
+                <span className={downArrow}> ⯆ </span>
               </div>
-              <div className="invisible text-xs absolute z-50 flex w-[150px] flex-col bg-white py-1 px-4 text-gray-800 shadow-xl group-hover:visible group-hover: w-48 rounded">
+              <div className={navItemListSubList}>
                 <a className={productStyle} href={`${site}about-us`}>
                   ABOUT US
                 </a>
@@ -591,44 +619,44 @@ const Header = () => {
           </div>
 
           {/* SEARCH BAR */}
-          <div className=" w-6/12 flex md:hidden lg:flex lg:w-3/12 h-5 lg:h-8 border border-solid border-white rounded-3xl  items-center px-2 lg:px-4 py-1">
-            <div className="cursor-pointer text-white md:text-2xl mr-1">
+          <div className={searchInputIcon}>
+            <div className={searIconDesk}>
               <BiSearchAlt2 onClick={() => handleSearch()} />
             </div>
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-7/12 text-white text-xs md:text-base border-none bg-[#7F0019] "
+              className={searchInputDesk}
               placeholder="Search Products..."
             />
           </div>
 
           {/* SEARCH FOR MEDIUM SIZE */}
-          <div className="hidden md:block md:w-2/12 lg:hidden ">
-            <div className="text-white text-2xl mr-1 w-full flex justify-end">
+          <div className={searchWrapperMScreen}>
+            <div className={searchIconMScreen}>
               <BiSearchAlt2 />
             </div>
           </div>
 
           {/* SOCIAL MEDIA */}
-          <div className="text-white hidden md:w-2/12 md:flex justify-evenly md:text-2xl lg:text-4xl ">
-            <a href="https://www.instagram.com/ahtfoods/" target="_blanket">
-              <FaInstagram className="cursor-pointer" />
-            </a>
-            <a
+          <div className={socialMediaWrapper}>
+            <Link href="https://www.instagram.com/ahtfoods/" target="_blanket">
+              <FaInstagram className={navItemPhoneView} />
+            </Link>
+            <Link
               href="https://api.whatsapp.com/send/?phone=989123865564&text&type=phone_number&app_absent=0"
               target="_blank"
             >
-              <FaWhatsapp className="cursor-pointer" />
-            </a>
-            <a href="mailto:info@ahtfoods.com? subject= subject text">
-              <CgMail className="cursor-pointer" />
-            </a>
+              <FaWhatsapp className={navItemPhoneView} />
+            </Link>
+            <Link href="mailto:info@ahtfoods.com? subject= subject text">
+              <CgMail className={navItemPhoneView} />
+            </Link>
           </div>
 
           {/* HAMBERGER MENU */}
           <div
-            className=" block text-white text-xl md:hidden cursor-pointer"
+            className={burgerMenu}
             onClick={() => setMenuToggle(true)}
           >
             <TiThMenu />
