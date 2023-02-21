@@ -16,12 +16,22 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { api, site, path } from "config/api";
 // import { NewInstance } from "api/http";
-// import YouMayLike from "components/youMayLike/YouMayLike";
+import YouMayLike from "components/YouMayLike";
 import desktopSlider from '../assets/desktopSlider/index'
 import phoneSlider from '../assets/phoneSlider/index'
+import Card from '@/components/card';
+
+export const getStaticProps = async () => {
+  const res = await fetch(`https://ahtback-u095.onrender.com/products?category=3&type=retail&_limit=6`)
+  const data = await res.json()
+
+  return {
+      props: {popular: data}
+  }
+}  
 
 
-const Home = () => {
+const Home = ({popular}) => {
   const [news, setNews] = useState();
   const [events, setEvents] = useState();
 
@@ -143,9 +153,22 @@ const Home = () => {
         </div>
       </div> */}
 
-      {/* POPULARE PRODUCTS  */}
-      {/* <p className="text-3xl md:text-[38px] text-[#660100] m-4">POPULARS</p>
-      <YouMayLike /> */}
+      {/* POPULAR PRODUCTS  */}
+      <p className="text-3xl md:text-[38px] text-[#660100] m-4">POPULAR</p>
+      {/* <YouMayLike /> */}
+      <div id="popularWrapper" className="w-full md:p-8 ">
+
+<div className="md:flex justify-center items-center">
+
+
+    {popular?.map((product) => (
+        <Card product={product} key={product.id}/>
+
+    ))}
+
+
+</div>
+</div>
     </>
   );
 };

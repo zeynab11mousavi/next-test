@@ -1,7 +1,7 @@
-export const URL = 'https://ahtb.onrender.com'
-export const api = 'https://ahtb.onrender.com/';
+export const URL = 'https://ahtback-u095.onrender.com'
+export const api = 'https://ahtback-u095.onrender.com/';
 export const site = 'http://localhost:3000/';
-export const path = `https://ahtb.onrender.com/files/`;
+export const path = `https://ahtback-u095.onrender.com/files/`;
 export const category = 'category';
 export const subcategory = 'subcategory';
 export const products = 'products';
