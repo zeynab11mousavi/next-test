@@ -14,7 +14,7 @@ import { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { api, site, path } from "config/api";
+import { api, site, path, products, category } from "config/api";
 // import { NewInstance } from "api/http";
 import YouMayLike from "components/YouMayLike";
 import desktopSlider from '../assets/desktopSlider/index'
@@ -22,28 +22,33 @@ import phoneSlider from '../assets/phoneSlider/index'
 import Card from '@/components/card';
 
 export const getStaticProps = async () => {
-  const res = await fetch(`https://ahtback-u095.onrender.com/products?category=3&type=retail&_limit=6`)
+  // FETCH POPULAR PRODUCTS 
+  const res = await fetch(`${api}${products}?${category}=3&type=retail&_limit=6`)
   const data = await res.json()
 
+  // FETCH POPULAR PRODUCTS 
+  const newsRes = await fetch(`${api}news?_limit=3`)
+  const newsData = await newsRes.json()
+
+  // FETCH POPULAR PRODUCTS 
+  const eventsRes = await fetch(`${api}events`)
+  const eventsData = await eventsRes.json()
+
   return {
-      props: {popular: data}
+      props: {
+        popular: data,
+        news: newsData,
+        events: eventsData
+      }
   }
 }  
 
 
-const Home = ({popular}) => {
-  const [news, setNews] = useState();
-  const [events, setEvents] = useState();
-
+const Home = ({popular, news, events}) => {
 
   const phoneSlid =  [phoneSlider.Pista, phoneSlider.Figs, phoneSlider.AHT] ;
   const deskSlid = [desktopSlider.PistaD, desktopSlider.FigsD, desktopSlider.AHTD]  ;
 
-  // useEffect(() => {
-  //   // NewInstance.get(`${api}news?_limit=3`).then((res) => setNews(res.data));
-
-  //   // NewInstance.get(`${api}events`).then((res) => setEvents(res.data));
-  // }, []);
   return (
     <>
       {/* SLIDERS */}
@@ -58,7 +63,7 @@ const Home = ({popular}) => {
         >
           {deskSlid?.map((slide, index = 0) => (
             <SwiperSlide key={`${index++}`}>
-              <div className="mt-16 md:mt-2">
+              <div className="mt-16 md:mt-[100px]">
                 <Image
                   className="w-9/12 mx-auto hidden md:block"
                   src={deskSlid[index]}
@@ -81,12 +86,12 @@ const Home = ({popular}) => {
 
       {/* NEWS AND EVENTD */}
 
-      {/* <div
+      <div
         id="newsEventsWrapper"
         className="w-full lg:p-8 block md:flex justify-around"
-      > */}
+      >
         {/* NEWSLETTERS */}
-        {/* <div className=" w-full md:w-8/12 mx-auto md:mx-[0]">
+        <div className=" w-full md:w-8/12 mx-auto md:mx-[0]">
           <div className="text-3xl md:text-[38px] text-[#7D2F2F] mb-4 ml-4">
             {" "}
             NEWS
@@ -94,8 +99,8 @@ const Home = ({popular}) => {
           <div
             id="news"
             className="w-full grid grid-cols-1 md:grid-cols-3 gap-1.5 md: gap-6"
-          > */}
-            {/* {news?.map((i, index = 0) => (
+          >
+            {news?.map((i, index = 0) => (
               <div
                 key={index++}
                 className="shadow-sm p-4 border border-gray-50 w-[310px] h-[300px] mx-auto "
@@ -104,6 +109,8 @@ const Home = ({popular}) => {
                   className="h-[200px] mx-auto hover:blur-[1px] "
                   src={`${path}${i.image}`}
                   alt={i.title}
+                  width={300}
+                  height={100}
                 />
                 <div className="felx-col justifuy-between">
                   <p className="text-sm md:text-base text-[#7D2F2F]">
@@ -117,12 +124,12 @@ const Home = ({popular}) => {
                   </a>
                 </div>
               </div>
-            ))} */}
-          {/* </div>
-        </div> */}
+            ))}
+          </div>
+        </div>
 
         {/* EVENTS */}
-        {/* <div id="events" className="w-full mx-auto md:w-3/12 mt-8 md:mt-0 ">
+        <div id="events" className="w-full mx-auto md:w-3/12 mt-8 md:mt-0 ">
           <div className=" text-3xl md:text[32px] text-[#7D2F2F] mb-0 m-4">
             {" "}
             UPCOMING EVENTS
@@ -148,10 +155,10 @@ const Home = ({popular}) => {
                   </p>
                 </div>
               </div>
-            ))} */}
-          {/* </div>
+            ))}
+          </div>
         </div>
-      </div> */}
+      </div>
 
       {/* POPULAR PRODUCTS  */}
       <p className="text-3xl md:text-[38px] text-[#660100] m-4">POPULAR</p>
