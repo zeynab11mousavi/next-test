@@ -14,14 +14,15 @@ const nextConfig = {
 
 // // next.config.js
 module.exports = {
+
   images: {
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'https://ahtback-u095.onrender.com',
-        port: '',
-        pathname: '/files/**',
-      },
+        {
+            protocol: 'https',
+            hostname: '**',
+            port: '',
+            pathname: '**',
+        },
     ],
-  },
+},
 }
