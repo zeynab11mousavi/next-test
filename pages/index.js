@@ -1,53 +1,49 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-// import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
-
-
-import { useEffect } from "react";
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper";
-// import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Image from "next/image";
+import { Inter } from "@next/font/google";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper";
 import { api, site, path, products, category } from "config/api";
-// import { NewInstance } from "api/http";
-import YouMayLike from "components/YouMayLike";
-import desktopSlider from '../assets/desktopSlider/index'
-import phoneSlider from '../assets/phoneSlider/index'
-import Card from '@/components/card';
+import desktopSlider from "../assets/desktopSlider/index";
+import phoneSlider from "../assets/phoneSlider/index";
+import Card from "@/components/card";
+const inter = Inter({ subsets: ["latin"] });
+
+//------------------------------------------------------ GET STATIC PROPS ----------------------------------------------------------------
 
 export const getStaticProps = async () => {
-  // FETCH POPULAR PRODUCTS 
-  const res = await fetch(`${api}${products}?${category}=3&type=retail&_limit=6`)
-  const data = await res.json()
+  // FETCH POPULAR PRODUCTS
+  const res = await fetch(
+    `${api}${products}?${category}=3&type=retail&_limit=6`
+  );
+  const data = await res.json();
 
-  // FETCH POPULAR PRODUCTS 
-  const newsRes = await fetch(`${api}news?_limit=3`)
-  const newsData = await newsRes.json()
+  // FETCH POPULAR PRODUCTS
+  const newsRes = await fetch(`${api}news?_limit=3`);
+  const newsData = await newsRes.json();
 
-  // FETCH POPULAR PRODUCTS 
-  const eventsRes = await fetch(`${api}events`)
-  const eventsData = await eventsRes.json()
+  // FETCH POPULAR PRODUCTS
+  const eventsRes = await fetch(`${api}events`);
+  const eventsData = await eventsRes.json();
 
   return {
-      props: {
-        popular: data,
-        news: newsData,
-        events: eventsData
-      }
-  }
-}  
+    props: {
+      popular: data,
+      news: newsData,
+      events: eventsData,
+    },
+  };
+};
 
-
-const Home = ({popular, news, events}) => {
-
-  const phoneSlid =  [phoneSlider.Pista, phoneSlider.Figs, phoneSlider.AHT] ;
-  const deskSlid = [desktopSlider.PistaD, desktopSlider.FigsD, desktopSlider.AHTD]  ;
+const Home = ({ popular, news, events }) => {
+  const phoneSlid = [phoneSlider.Pista, phoneSlider.Figs, phoneSlider.AHT];
+  const deskSlid = [
+    desktopSlider.PistaD,
+    desktopSlider.FigsD,
+    desktopSlider.AHTD,
+  ];
 
   return (
     <>
@@ -164,21 +160,14 @@ const Home = ({popular, news, events}) => {
       <p className="text-3xl md:text-[38px] text-[#660100] m-4">POPULAR</p>
       {/* <YouMayLike /> */}
       <div id="popularWrapper" className="w-full md:p-8 ">
-
-<div className="md:flex justify-center items-center">
-
-
-    {popular?.map((product) => (
-        <Card product={product} key={product.id}/>
-
-    ))}
-
-
-</div>
-</div>
+        <div className="md:flex justify-center items-center">
+          {popular?.map((product) => (
+            <Card product={product} key={product.id} />
+          ))}
+        </div>
+      </div>
     </>
   );
 };
 
 export default Home;
-
