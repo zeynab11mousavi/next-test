@@ -35,24 +35,8 @@ const Card = (props) => {
               className=" h-48 w-auto object-cover mx-auto transition ease-in-out duration-300 hover:filter  hover:grayscale hover:contrast-100"
             />
           ) : null
-          //  (<img
-          //   src={coming}
-          //   alt={props.product.name}
-          //   className=" h-48 w-auto object-cover mx-auto transition ease-in-out duration-300 hover:filter  hover:grayscale hover:contrast-100"
-          // />
-          // )
         }
       </a>
-
-      {/* 
-            <a href={`${site}product/${props.product.name}`} className="6/12  mx-auto">
-                <img src={`${path}${props.product.image[0]}`} alt={props.product.name} className="h-48 mx-auto" />
-            </a>
-            <div className="h-16 w-16 p-2 overflow-hidden">
-
-            <img src={`${path}${product.image[0]}`} className="object-contain" alt="" />
-            </div> 
-        */}
 
       <div id="nameAndIcon " className="flex justify-between">
         <p className="text-[18-px] text-ellipsis overflow-hidden ">
