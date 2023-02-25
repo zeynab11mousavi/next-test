@@ -3,11 +3,12 @@ import Header from "./header";
 
 const Layout = ({children}) => {
     return ( 
-        <div>
+        <>
             <Header/>
+            <div className="md:mt-20"/>
             {children}
             <Footer/>
-        </div>
+        </>
      );
 }
  

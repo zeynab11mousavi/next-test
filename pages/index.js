@@ -37,6 +37,10 @@ export const getStaticProps = async () => {
   };
 };
 
+
+
+//--------------------------------------------COMPONENT--------------------------------------------//
+
 const Home = ({ popular, news, events }) => {
   const phoneSlid = [phoneSlider.Pista, phoneSlider.Figs, phoneSlider.AHT];
   const deskSlid = [
@@ -59,7 +63,7 @@ const Home = ({ popular, news, events }) => {
         >
           {deskSlid?.map((slide, index = 0) => (
             <SwiperSlide key={`${index++}`}>
-              <div className="mt-16 md:mt-[100px]">
+              <div className="mt-16 md:mt-2">
                 <Image
                   className="w-9/12 mx-auto hidden md:block"
                   src={deskSlid[index]}
@@ -101,13 +105,13 @@ const Home = ({ popular, news, events }) => {
                 key={index++}
                 className="shadow-sm p-4 border border-gray-50 w-[310px] h-[300px] mx-auto "
               >
-                <Image
+                {/* <Image
                   className="h-[200px] mx-auto hover:blur-[1px] "
                   src={`${path}${i.image}`}
                   alt={i.title}
                   width={300}
                   height={100}
-                />
+                /> */}
                 <div className="felx-col justifuy-between">
                   <p className="text-sm md:text-base text-[#7D2F2F]">
                     {i.title}
