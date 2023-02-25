@@ -1,4 +1,3 @@
-
 import { NewInstance } from "@/api/http";
 import { api, category, path, products, subcategory, site } from "@/config/api";
 import { useRouter } from "next/router";
@@ -12,7 +11,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaStar } from "react-icons/fa";
 import YouMayLike from "@/components/YouMayLike";
-
 
 const Details = () => {
   const [product, setProduct] = useState([]);
@@ -47,8 +45,7 @@ const Details = () => {
                 navigation
                 autoplay={true}
                 pagination={{ clickable: true }}
-                style={{ padding: "" }}
-              >
+                style={{ padding: "" }}>
                 {product[0].image?.map((slide) => (
                   <SwiperSlide key={`${slide}`}>
                     <img
@@ -60,7 +57,9 @@ const Details = () => {
                 ))}
               </Swiper>
             ) : (
-              <img src={coming} alt={product[0].name} />
+              <div className="text-center py-8 w-full h-full b">
+                No picture available
+              </div>
             )}
           </div>
 
@@ -90,8 +89,7 @@ const Details = () => {
                 WANNA SEE OUR PACKAGES FOR {product[0].name}
                 <div>
                   <a
-                    href={`${site}${products}/subcategory/pack/${product[0].subcategory}&type=retail`}
-                  >
+                    href={`${site}${products}/subcategory/pack/${product[0].subcategory}&type=retail`}>
                     click here
                   </a>
                 </div>
@@ -153,15 +151,13 @@ const Details = () => {
 
       <div
         id="nutriotionAndBenefits"
-        className="md:flex justify-between md:py-4 md:my-8"
-      >
+        className="md:flex justify-between md:py-4 md:my-8">
         <div id="Nutrition" className="w-full md:w-4/12 ">
           <p className="text-sm md:text-lg md:my-2 md:p-4 font-semibold md:text-3xl ">
             NUTRIONON FACTS
             <button
               className="md:hidden"
-              onClick={() => setNutritionFact(!nutritionFacts)}
-            >
+              onClick={() => setNutritionFact(!nutritionFacts)}>
               {" "}
               ⯆{" "}
             </button>
@@ -171,8 +167,7 @@ const Details = () => {
 
           <table
             id="facts"
-            className="hidden md:block mx-auto shadow-md w-fit p-4"
-          >
+            className="hidden md:block mx-auto shadow-md w-fit p-4">
             {/* HEADER */}
             <thead>
               <tr className="border-b">
@@ -196,13 +191,11 @@ const Details = () => {
                 fact[1] != false ? (
                   <tr
                     key={i++}
-                    className="transition duration-300 ease-in-out hover:bg-gray-100 border-b"
-                  >
+                    className="transition duration-300 ease-in-out hover:bg-gray-100 border-b">
                     {fact.map((item, j = 0) => (
                       <td
                         key={j++}
-                        className="px-6 py-2 whitespace-nowrap text-sm"
-                      >
+                        className="px-6 py-2 whitespace-nowrap text-sm">
                         {item}
                       </td>
                     ))}
@@ -236,13 +229,11 @@ const Details = () => {
                 fact[1] != false ? (
                   <tr
                     key={i++}
-                    className="transition duration-300 ease-in-out hover:bg-gray-100 border-b"
-                  >
+                    className="transition duration-300 ease-in-out hover:bg-gray-100 border-b">
                     {fact.map((item, j = 0) => (
                       <td
                         key={j++}
-                        className="px-6 py-2 whitespace-nowrap text-sm"
-                      >
+                        className="px-6 py-2 whitespace-nowrap text-sm">
                         {item}
                       </td>
                     ))}
@@ -259,8 +250,7 @@ const Details = () => {
             BENEFITS
             <button
               className="md:hidden"
-              onClick={() => setBenefits(!benefits)}
-            >
+              onClick={() => setBenefits(!benefits)}>
               {" "}
               ⯆{" "}
             </button>
@@ -285,11 +275,23 @@ const Details = () => {
       <YouMayLike />
     </div>
   ) : (
-    <div className="w-full p-36" >
-
-    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-          {/* YOU MAY ALSO LIKE */}
-          <p className="text-3xl md:text-[38px] text-[#660100] m-4">
+    <div className="w-full p-36">
+      <div class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      {/* YOU MAY ALSO LIKE */}
+      <p className="text-3xl md:text-[38px] text-[#660100] m-4">
         You may also like
       </p>
       <YouMayLike />
