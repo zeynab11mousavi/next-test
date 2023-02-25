@@ -1,6 +1,6 @@
 
 import { NewInstance } from "@/api/http";
-import { api, category, path, products, subcategory } from "@/config/api";
+import { api, category, path, products, subcategory, site } from "@/config/api";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -35,7 +35,7 @@ const Details = () => {
   }, [router]);
 
   return product.length > 0 ? (
-    <div id="productPageWrapper" className="py-8 px-16 text-[#8A0019] md:mt-48">
+    <div id="productPageWrapper" className="py-8 px-16 text-[#8A0019] md:mt-36">
       <div className="block md:flex justify-around  md:my-12">
         <div id="picAndIntro" className="md:flex  w-full md:w-8/12">
           {/* PRODUCT PICTURE */}

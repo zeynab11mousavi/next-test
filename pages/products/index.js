@@ -16,7 +16,7 @@ export const getStaticProps = async () => {
 
 const Products = ({ products }) => {
   return (
-    <div className="flex">
+    <div className="flex md:mt-36" >
       <SideNavigation />
       <div className="w-full lg:p-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
         {products.map((product) => (
