@@ -71,19 +71,19 @@ const Footer = () => {
             <p className="text-lg">QUICK LINKS</p>
             <div className="text-sm">
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
-                <a href={`${site}question-form`}>Contact us</a>
+                <a href={`/info/question-form`}>Contact us</a>
               </p>
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
-                <a href={`${site}custom-packing`}>Custom Packing</a>
+                <a href={`/info/custom-packing`}>Custom Packing</a>
               </p>
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
-                <a href={`${site}FQA`}>FQA</a>
+                <a href={`/info/FQA`}>FQA</a>
               </p>
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
-                <a href={`${site}about-us`}>About Us</a>
+                <a href={`/info/about-us`}>About Us</a>
               </p>
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
-                <a href={`${site}factories`}>Factories</a>
+                <a href={`/info/factories`}>Factories</a>
               </p>
             </div>
           </div>

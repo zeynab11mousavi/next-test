@@ -117,7 +117,7 @@ const Home = ({ popular, news, events }) => {
                     {i.title}
                   </p>
                   <a
-                    href={`${site}newsletters/${i.title}`}
+                    href={`${site}event-news/${i.title}`}
                     className="text-xs md:text-sm text-[#A54646]"
                   >
                     click here to read the article
