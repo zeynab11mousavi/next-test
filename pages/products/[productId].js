@@ -3,14 +3,15 @@ import { api, category, path, products, subcategory, site } from "@/config/api";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+// import YouMayLike from "components/youMayLike/YouMayLike";
 import { Navigation, Pagination, Autoplay } from "swiper";
-import noImage from "../../assets/noImage.jpg"
+// import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaStar } from "react-icons/fa";
 import YouMayLike from "@/components/YouMayLike";
-import Image from "next/image";
+import { MdArrowDropDown } from "react-icons/md";
 
 const Details = () => {
   const [product, setProduct] = useState([]);
@@ -57,12 +58,9 @@ const Details = () => {
                 ))}
               </Swiper>
             ) : (
-              <Image
-              width={100}
-              height={70}
-              src={noImage}
-              className="  md:h-[300px] w-auto mx-auto mb-8  md:mb-12 "
-            />
+              <div className="text-center py-8 w-full h-full b">
+                No picture available
+              </div>
             )}
           </div>
 
@@ -126,13 +124,13 @@ const Details = () => {
             )}
             <button className="md:hidden" onClick={() => setAbout(!about)}>
               {" "}
-              ⯆{" "}
+              <MdArrowDropDown/>{" "}
             </button>
           </p>
           <p className="hidden md:block">
-            {cat?.map((c, i=300) =>
+            {cat?.map((c) =>
               c.id === Number(product[0].category) ? (
-                <span key={i++}>
+                <span>
                   {c.description ? c.description : "will update soon"}
                 </span>
               ) : null
@@ -141,9 +139,9 @@ const Details = () => {
         </div>
         {about && (
           <p className=" md:hidden">
-            {cat?.map((c, i = 0) =>
+            {cat?.map((c) =>
               c.id === Number(product[0].category) ? (
-                <span key={i++}>
+                <span>
                   {c.description ? c.description : "will update soon"}
                 </span>
               ) : null
@@ -157,12 +155,12 @@ const Details = () => {
         className="md:flex justify-between md:py-4 md:my-8">
         <div id="Nutrition" className="w-full md:w-4/12 ">
           <p className="text-sm md:text-lg md:my-2 md:p-4 font-semibold md:text-3xl ">
-            NUTRIONON FACTS
+            NUTRITION FACTS
             <button
               className="md:hidden"
               onClick={() => setNutritionFact(!nutritionFacts)}>
               {" "}
-              ⯆{" "}
+              <MdArrowDropDown/>{" "}
             </button>
           </p>
 
@@ -255,7 +253,7 @@ const Details = () => {
               className="md:hidden"
               onClick={() => setBenefits(!benefits)}>
               {" "}
-              ⯆{" "}
+              <MdArrowDropDown/>{" "}
             </button>
           </p>
           <div
