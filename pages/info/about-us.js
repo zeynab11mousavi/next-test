@@ -1,5 +1,5 @@
-import one from "../../assets/about/one.png";
-import two from "../../assets/about/two.png";
+import aboutPic from "@/assets/about/about";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -13,10 +13,10 @@ const About = () => {
           continents with the most premium quality of Raisins, Sultanas, Dates
           and Dates' products, Saffron, and Pistachios.
         </div>
-        <img className="w-full md:w-3/12" src={one} alt="aht's award" />
+        <Image width={1000} height={700} className="w-full md:w-3/12" src={aboutPic.one} alt="aht's award" />
       </div>
       <div className="w-full md:flex my-4 justify-around md:mt-8">
-        <img className="w-full md:w-3/12" src={two} alt="aht" />
+        <Image width={1000} height={700} className="w-full md:w-3/12" src={aboutPic.two} alt="aht" />
         <p className="w-full md:w-8/12 ">
           As part of our responsibility and commitments, we design safety and
           sustainability into our products and manufacturing processes. Handpick

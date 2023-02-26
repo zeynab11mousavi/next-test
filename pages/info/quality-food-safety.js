@@ -1,8 +1,9 @@
+import Image from "next/image";
 import qualityAndFoodSafety from "../../assets/qualityAndFoodSafety/qualityAndFoodSafety";
 const QualityAndFoodSafety = () => {
   return (
-    <div className="w-8/12 mx-auto my-8 md:mt-48">
-      <h3 className="text-lg md:text-2xl my-6 ">QUALITY & FOOD SAFETY</h3>
+    <div className="w-8/12 mx-auto my-8 md:mt-48 text-[#7D2F2F]">
+      <h3 className="text-lg md:text-2xl justify-between my-6 text-[#660100]">QUALITY & FOOD SAFETY</h3>
       <div className="w-full md:flex items-center my-2 md:my-4">
         <p className="md:w-8/12 mx-auto">
           Investments in manpower, training, quality culture, research and
@@ -19,15 +20,15 @@ const QualityAndFoodSafety = () => {
           experts let us claim that all AHT products are traceable from farm to
           fork.
         </p>
-        <img
+        <Image
           className=" h-64 mx-auto"
           src={qualityAndFoodSafety.one}
           alt="aht facility"
         />
       </div>
 
-      <div className="w-full md:flex items-center my-2 md:my-4">
-        <img
+      <div className="w-full md:flex justify-between items-center my-2 md:my-4">
+        <Image
           className=" h-64 mx-auto"
           src={qualityAndFoodSafety.two}
           alt="aht facility"
@@ -50,7 +51,7 @@ const QualityAndFoodSafety = () => {
           technical developments had helped us to be a pioneer.
         </p>
       </div>
-      <div className="w-full md:flex items-center my-2 md:my-4">
+      <div className="w-full md:flex justify-between items-center my-2 md:my-4">
         <p className="md:w-8/12 mx-auto">
           It’s important to us that we adequately address the needs of our
           clients and therefore, we must demonstrate our diligent compliance
@@ -66,7 +67,7 @@ const QualityAndFoodSafety = () => {
           accurate and meaningful. If any doubt still remains please feel free
           to contact our QA department on: qa@aht.ir , qa@ahtfoods.com
         </p>
-        <img
+        <Image
           className=" h-64 mx-auto"
           src={qualityAndFoodSafety.three}
           alt="aht facility"
@@ -74,7 +75,7 @@ const QualityAndFoodSafety = () => {
       </div>
 
       <div className="w-full md:flex items-center my-2 md:my-4">
-        <img
+        <Image
           className=" md:w-3/12 mx-auto"
           src={qualityAndFoodSafety.four}
           alt="aht facility"
@@ -111,7 +112,7 @@ const QualityAndFoodSafety = () => {
           in products no matter what type of packaging is used for final
           product.
         </p>
-        <img
+        <Image
           className=" h-64 mx-auto"
           src={qualityAndFoodSafety.five}
           alt="aht facility"

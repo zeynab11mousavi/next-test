@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 const FQA = () => {
   return (
-    <div className="w-8/12 mx-auto my-8 md:mt-48 text-gray-800">
-      <div>
+    <div className="w-8/12 mx-auto my-8 md:mt-48 text-gray-800 ">
+      <div className="text-[#7D2F2F]">
         <p className="text-2xl my-1 mt-8">Why AHT?</p>
         <p>
           AHT is one of the oldest, well-trusted and diverse dried fruit and
@@ -32,7 +34,7 @@ const FQA = () => {
         </p>
       </div>
 
-      <div>
+      <div className="text-[#7D2F2F]">
         <p className="text-2xl my-1 mt-8">Where are you located?</p>
         <p>
           AHT's head office is in Tehran-Iran, we can supply our loyal customers
@@ -41,7 +43,7 @@ const FQA = () => {
         </p>
       </div>
 
-      <div>
+      <div className="text-[#7D2F2F]">
         <p className="text-2xl my-1 mt-8">What are your opening hours?</p>
         <p>
           SAT –THU 8:00-18:00 IRST (GMT+3:30) Friday is the weekend in Iran, but
@@ -49,7 +51,7 @@ const FQA = () => {
         </p>
       </div>
 
-      <div>
+      <div className="text-[#7D2F2F]">
         <p className="text-2xl my-1 mt-8">How do we contact you?</p>
         <p>
           We prefer all communications by e-mail to export@ahtfoods.com ,
@@ -66,7 +68,7 @@ const FQA = () => {
         </p>
       </div>
 
-      <div>
+      <div className="text-[#7D2F2F]">
         <p className="text-2xl my-1 mt-8"> How long are prices valid?</p>
         <p>
           Prices vary based on quantity, payment, and shipping terms. Therefore
@@ -76,7 +78,7 @@ const FQA = () => {
         </p>
       </div>
 
-      <div>
+      <div className="text-[#7D2F2F]">
         <p className="text-2xl my-1 mt-8">How can we place orders?</p>
         <p>
           It is better to place an order by email our professional marketing
@@ -84,7 +86,7 @@ const FQA = () => {
         </p>
       </div>
 
-      <div>
+      <div className="text-[#7D2F2F]">
         <p className="text-2xl my-1 mt-8">
           What are your minimum order quantities?
         </p>
@@ -95,7 +97,7 @@ const FQA = () => {
         </p>
       </div>
 
-      <div>
+      <div className="text-[#7D2F2F]">
         <p className="text-2xl my-1 mt-8">What are your shipping terms?</p>
         <p>
           Normal shipment is “by sea”. Shipment by air, couriers, post parcel
@@ -103,7 +105,7 @@ const FQA = () => {
         </p>
       </div>
 
-      <div>
+      <div className="text-[#7D2F2F]">
         <p className="text-2xl my-1 mt-8">
           How fast can you make shipments? How fast can we receive goods?
         </p>
@@ -115,7 +117,7 @@ const FQA = () => {
         </p>
       </div>
 
-      <div>
+      <div className="text-[#7D2F2F]">
         <p className="text-2xl my-1 mt-8">
           What quality guarantees are offered by you?
         </p>
@@ -127,7 +129,7 @@ const FQA = () => {
         </p>
       </div>
 
-      <div>
+      <div className="text-[#7D2F2F]">
         <p className="text-2xl my-1 mt-8">
           Will I receive options/advices to help me choose the product (s) I
           want?
@@ -140,8 +142,8 @@ const FQA = () => {
           for you to test and verify particularity of product .
         </p>
       </div>
-      <p>
-        Didn’t find your doubts clarified here? Fill up this formfor immediate
+      <p className="text-[#7D2F2F]">
+        Didn’t find your doubts clarified here? Fill up this <Link href={`/info/question-form`} className="text-[#660100] font-semibold">Form</Link> for immediate
         response.
       </p>
     </div>

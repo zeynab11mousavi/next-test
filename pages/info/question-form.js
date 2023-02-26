@@ -40,7 +40,7 @@ const QuestionForm = () => {
   return (
     <form
       onSubmit={(e) => handleSubmit(e)}
-      className="bg-gradient-to-r from-red-300 to-red-100 rounded-md w-full md:w-8/12 py-16 bg-red-50 mx-auto flex justify-center items-center">
+      className="bg-gradient-to-r from-red-300 to-red-100 rounded-md w-full md:w-8/12 py-16 bg-red-50 mx-auto flex justify-center items-center md:mt-36">
       <ToastContainer />
       <div className="w-8/12 ">
         <div className="my-4">

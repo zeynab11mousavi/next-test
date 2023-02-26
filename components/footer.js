@@ -16,10 +16,10 @@ const Footer = () => {
   return (
     <footer className=" bg-gradient-to-t from-[#7F0019] to-[#8A0019] text-white px-10 md:px-16 pt-8 md:px-32">
       <div id="socialMedia" className="mb-8">
-        <p className="text-base md:lg lg:text-xl my-2 "> JOIN AND CONTACT US</p>
+        <p className=" md:lg lg:text-xl my-2 "> JOIN AND CONTACT US</p>
         <div
           id="socialMedia-icons"
-          className="flex text-base md:text-2xl lg:text-3xl "
+          className="flex text-2xl lg:text-3xl "
         >
           <a href="https://www.instagram.com/ahtfoods/" target="_blank">
             <FaInstagram className="mr-4 transition duration-300 ease-in-out hover:text-red-100" />
@@ -122,7 +122,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="text-center py-4 text-xs md:text-sm lg:text-base">
+      <p className="text-center py-4 text-xs md:text-sm lg:">
         © AHT 2023
       </p>
     </footer>

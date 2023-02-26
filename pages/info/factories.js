@@ -1,6 +1,7 @@
 import map from "../../assets/factories/map.jpg";
 import factories from "../../assets/factories/index.js";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const Factories = () => {
   const [images, setImage] = useState([]);
@@ -10,12 +11,12 @@ const Factories = () => {
   }, []);
 
   return (
-    <div className="my-8 md:mt-48 text-lg md:text-xl w-full">
+    <div className="my-8 md:mt-48 text-lg w-full">
       <div className="w-10/12 mx-auto ">
         <div className="w-full  md:flex">
           <div className="w-full md:w-8/12">
-            <h1 className="tex-xl md:text-2xl mb-6">AHT FACTORIES</h1>
-            <div>
+            <h1 className="tex-xl md:text-2xl mb-6 text-[#660100]">AHT FACTORIES</h1>
+            <div className="text-[#7D2F2F]">
               <p>
                 AHT as a well-trusted Iranian IFS, FSSC 22000, KOSHER, HALAL
                 certified and SEDEX member is one of the main and the oldest
@@ -43,36 +44,36 @@ const Factories = () => {
               </p>
             </div>
           </div>
-          <img className="w-full md:w-4/12" src={map} alt="aht-export" />
+          <Image className="w-full md:w-4/12" src={map} alt="aht-export" />
         </div>
 
         <div className="my-8 grid gap-6 grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
-          <img src={factories[1]} alt="AHR-FACTORY" />
-          <img src={factories[2]} alt="AHR-FACTORY " />
-          <img src={factories[3]} alt="AHR-FACTORY" />
-          <img src={factories[4]} alt="AHR-FACTORY" />
-          <img src={factories[5]} alt="AHR-FACTORY" />
-          <img src={factories[6]} alt="AHR-FACTORY" />
-          <img src={factories[7]} alt="AHR-FACTORY" />
-          <img src={factories[8]} alt="AHR-FACTORY" />
-          <img src={factories[9]} alt="AHR-FACTORY" />
-          <img src={factories[10]} alt="AHR-FACTORY" />
-          <img src={factories[11]} alt="AHR-FACTORY" />
-          <img src={factories[12]} alt="AHR-FACTORY" />
-          <img src={factories[13]} alt="AHR-FACTORY" />
-          <img src={factories[14]} alt="AHR-FACTORY" />
-          <img src={factories[15]} alt="AHR-FACTORY" />
-          <img src={factories[16]} alt="AHR-FACTORY" />
-          <img src={factories[17]} alt="AHR-FACTORY" />
-          <img src={factories[18]} alt="AHR-FACTORY" />
-          <img src={factories[19]} alt="AHR-FACTORY" />
-          <img src={factories[20]} alt="AHR-FACTORY" />
-          <img src={factories[21]} alt="AHR-FACTORY" />
-          <img src={factories[22]} alt="AHR-FACTORY" />
-          <img src={factories[23]} alt="AHR-FACTORY" />
-          <img src={factories[24]} alt="AHR-FACTORY" />
-          <img src={factories[25]} alt="AHR-FACTORY" />
-          <img src={factories[26]} alt="AHR-FACTORY" />
+          <Image src={factories[1]} alt="AHR-FACTORY" />
+          <Image src={factories[2]} alt="AHR-FACTORY " />
+          <Image src={factories[3]} alt="AHR-FACTORY" />
+          <Image src={factories[4]} alt="AHR-FACTORY" />
+          <Image src={factories[5]} alt="AHR-FACTORY" />
+          <Image src={factories[6]} alt="AHR-FACTORY" />
+          <Image src={factories[7]} alt="AHR-FACTORY" />
+          <Image src={factories[8]} alt="AHR-FACTORY" />
+          <Image src={factories[9]} alt="AHR-FACTORY" />
+          <Image src={factories[10]} alt="AHR-FACTORY" />
+          <Image src={factories[11]} alt="AHR-FACTORY" />
+          <Image src={factories[12]} alt="AHR-FACTORY" />
+          <Image src={factories[13]} alt="AHR-FACTORY" />
+          <Image src={factories[14]} alt="AHR-FACTORY" />
+          <Image src={factories[15]} alt="AHR-FACTORY" />
+          <Image src={factories[16]} alt="AHR-FACTORY" />
+          <Image src={factories[17]} alt="AHR-FACTORY" />
+          <Image src={factories[18]} alt="AHR-FACTORY" />
+          <Image src={factories[19]} alt="AHR-FACTORY" />
+          <Image src={factories[20]} alt="AHR-FACTORY" />
+          <Image src={factories[21]} alt="AHR-FACTORY" />
+          <Image src={factories[22]} alt="AHR-FACTORY" />
+          <Image src={factories[23]} alt="AHR-FACTORY" />
+          <Image src={factories[24]} alt="AHR-FACTORY" />
+          <Image src={factories[25]} alt="AHR-FACTORY" />
+          <Image src={factories[26]} alt="AHR-FACTORY" />
         </div>
       </div>
     </div>

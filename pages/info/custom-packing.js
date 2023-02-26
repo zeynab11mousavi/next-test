@@ -1,16 +1,13 @@
-import one from "../../assets/customPacking/one.jpg";
-import two from "../../assets/customPacking/two.jpg";
-import three from "../../assets/customPacking/three.jpg";
-import four from "../../assets/customPacking/four.jpg";
-import five from "../../assets/customPacking/five.jpg";
+import customPacking from "@/assets/customPacking/customPacking";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
-// import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Image from "next/image";
 
 const CustomPacking = () => {
+  const {one, two, three, four, five} = customPacking
   const images = [one, two, three, four, five];
   return (
     <div className="w-8/12 mx-auto my-8 md:mt-48">
@@ -25,7 +22,7 @@ const CustomPacking = () => {
           style={{ margin: "0 0 2rem 0" }}>
           {images?.map((slide) => (
             <SwiperSlide key={`${slide}`}>
-              <img className="w-9/12 mx-auto" src={`${slide}`} alt="slider" />
+              <Image width={1000} height={700} className="w-9/12 mx-auto" src={slide} alt="slider" />
             </SwiperSlide>
           ))}
         </Swiper>

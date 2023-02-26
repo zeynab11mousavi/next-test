@@ -306,31 +306,31 @@ const Header = () => {
           {/* ABOUT TOGGLE  */}
           {about && (
             <div className="shadow-inner">
-              <a href={`${site}about-us`} className={productMobileView}>
+              <a href={`/info/about-us`} className={productMobileView}>
                 ABOUT US
               </a>
 
-              <a href={`${site}factories`} className={productMobileView}>
+              <a href={`/info/factories`} className={productMobileView}>
                 FACTORIES
               </a>
 
               <a
-                href={`${site}quality-food-safety`}
+                href={`/info/quality-food-safety`}
                 className={productMobileView}>
                 QUALITY AND FOOD SAFETY
               </a>
-              <a href={`${site}custom-packing`} className={productMobileView}>
+              <a href={`/info/custom-packing`} className={productMobileView}>
                 CUSTOM PACKING
               </a>
               <a
-                href={`${site}research-development`}
+                href={`/info/research-development`}
                 className={productMobileView}>
                 R & D
               </a>
-              <a href={`${site}FQA`} className={productMobileView}>
+              <a href={`/info/FQA`} className={productMobileView}>
                 FQA
               </a>
-              <a href={`${site}question-form`} className={productMobileView}>
+              <a href={`/info/question-form`} className={productMobileView}>
                 Contact Us
               </a>
             </div>
