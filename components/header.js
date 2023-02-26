@@ -112,12 +112,12 @@ const Header = () => {
                 FREEZE-DRIED <MdOutlineArrowRight />
               </Link>
               <Link
-                href={`${site}${products}/category/4&type=retail`}
+                href={`${site}${products}/category/5&type=retail`}
                 className={productMobileView}>
                 NUTS <MdOutlineArrowRight />
               </Link>
               <Link
-                href={`${site}${products}/category/5&type=retail`}
+                href={`${site}${products}/category/6&type=retail`}
                 className={productMobileView}>
                 SAFFRON <MdOutlineArrowRight />
               </Link>
@@ -150,12 +150,12 @@ const Header = () => {
                 FREEZE-DRIED <MdOutlineArrowRight />
               </Link>
               <Link
-                href={`${site}${products}/category/4&type=bulk`}
+                href={`${site}${products}/category/5&type=bulk`}
                 className={productMobileView}>
                 NUTS <MdOutlineArrowRight />
               </Link>
               <Link
-                href={`${site}${products}/category/5&type=bulk`}
+                href={`${site}${products}/category/6&type=bulk`}
                 className={productMobileView}>
                 SAFFRON <MdOutlineArrowRight />
               </Link>
@@ -371,12 +371,12 @@ const Header = () => {
                   FREEZE-DRIED <MdOutlineArrowRight />
                 </Link>
                 <Link
-                  href={`${site}${products}/category/4&type=bulk`}
+                  href={`${site}${products}/category/5&type=bulk`}
                   className={productStyle}>
                   NUTS <MdOutlineArrowRight />
                 </Link>
                 <Link
-                  href={`${site}${products}/category/5&type=bulk`}
+                  href={`${site}${products}/category/6&type=bulk`}
                   className={productStyle}>
                   SAFFRON <MdOutlineArrowRight />
                 </Link>
@@ -408,12 +408,12 @@ const Header = () => {
                   FREEZE-DRIED <MdOutlineArrowRight />
                 </Link>
                 <Link
-                  href={`${site}${products}/category/4&type=retail`}
+                  href={`${site}${products}/category/5&type=retail`}
                   className={productStyle}>
                   NUTS <MdOutlineArrowRight />
                 </Link>
                 <Link
-                  href={`${site}${products}/category/5&type=retail`}
+                  href={`${site}${products}/category/6&type=retail`}
                   className={productStyle}>
                   SAFFRON <MdOutlineArrowRight />
                 </Link>

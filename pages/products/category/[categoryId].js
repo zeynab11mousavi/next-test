@@ -16,9 +16,9 @@ const Category = () => {
   }, [categoryId]);
 
   return (
-    <div className="flex w-full justify-evenly items-start p-8 md:mt-36">
-      <SideNavigation />
+    <div className="flex w-full justify-evenly items-start md:p-8 md:mt-36 ">
 
+      <SideNavigation />
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
         {console.log(cat)}
         {cat.length > 0 ? (
