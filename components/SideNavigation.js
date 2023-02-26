@@ -13,8 +13,8 @@ const SideNavigation = () => {
     }, [])
     return (
         <div id="shortNavigation" className="shadow-sm text-[10px] md:text-base lg:w-[230px] sticky left-0 top-0 h-fit p-2 md:p-6 mx-auto">
-            {subcat?.map((item) => (
-                <div className="transition ease-in-out duration-300 hover:text-red-400 ">
+            {subcat?.map((item , i = 0) => (
+                <div key={i++} className="transition ease-in-out duration-300 hover:text-red-400 ">
                     <Link href={`${site}products/${subcategory}/${item.id}`}>{item.name}</Link>
                 </div>
             ))}

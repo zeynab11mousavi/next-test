@@ -25,35 +25,35 @@ const Card = (props) => {
         href={`products/${props.product.id}`}
         className="h-48 w-48 mb-4  mx-auto"
       >
-        {
-          props.product.image[0]?.length > 0 ? (
-            <img
-              src={`${path}${props.product.image[0]}`}
-              // width={100}
-              // height={70}
-              alt={props.product.name}
-              className=" h-48 w-auto object-cover mx-auto transition ease-in-out duration-300 hover:filter  hover:grayscale hover:contrast-100"
-            />
-          ) : null
-        }
+        {props.product.image[0]?.length > 0 ? (
+          <img
+            src={`${path}${props.product.image[0]}`}
+            // width={100}
+            // height={70}
+            alt={props.product.name}
+            className=" h-48 w-auto object-cover mx-auto transition ease-in-out duration-300 hover:filter  hover:grayscale hover:contrast-100"
+          />
+        ) : null}
       </div>
 
       <div id="nameAndIcon " className="flex justify-between">
         <p className="text-[18-px] text-ellipsis overflow-hidden ">
           {props.product.name}
         </p>
-        <button >
+        <button>
           <CgEnter />
         </button>
       </div>
       <p className="text-xs underline mb-2">
-        {cat?.map((c) =>
-          c.id === Number(props.product.category) ? <span>{c.name}</span> : null
+        {cat?.map((c, i = 0) =>
+          c.id === Number(props.product.category) ? (
+            <span key={i++}>{c.name}</span>
+          ) : null
         )}
         {"/ "}
-        {subcat?.map((sc) =>
+        {subcat?.map((sc, i = 300) =>
           sc.id === Number(props.product.subcategory) ? (
-            <span>{sc.name}</span>
+            <span key={i++}>{sc.name}</span>
           ) : null
         )}
       </p>

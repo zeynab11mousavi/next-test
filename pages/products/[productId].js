@@ -127,9 +127,9 @@ const Details = () => {
             </button>
           </p>
           <p className="hidden md:block">
-            {cat?.map((c) =>
+            {cat?.map((c, i=300) =>
               c.id === Number(product[0].category) ? (
-                <span>
+                <span key={i++}>
                   {c.description ? c.description : "will update soon"}
                 </span>
               ) : null
@@ -138,9 +138,9 @@ const Details = () => {
         </div>
         {about && (
           <p className=" md:hidden">
-            {cat?.map((c) =>
+            {cat?.map((c, i = 0) =>
               c.id === Number(product[0].category) ? (
-                <span>
+                <span key={i++}>
                   {c.description ? c.description : "will update soon"}
                 </span>
               ) : null
