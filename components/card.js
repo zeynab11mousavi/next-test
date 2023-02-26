@@ -19,7 +19,7 @@ const Card = (props) => {
   return (
     <Link
       href={`/products/${props.product.id}`}
-      className="w-[270px] md:w-[300px] md:w-[250px] lg:w-[230px] truncate shadow my-4 mx-auto md:mx-2 p-4 text-[#660100] cursor-pointer"
+      className="w-[250px] md:w-[300px] md:w-[250px] lg:w-[230px] truncate shadow my-4 mx-auto md:mx-2 p-4 text-[#660100] cursor-pointer"
     >
       <div
         href={`products/${props.product.id}`}
