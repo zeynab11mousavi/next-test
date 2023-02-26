@@ -3,14 +3,14 @@ import { api, category, path, products, subcategory, site } from "@/config/api";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import YouMayLike from "components/youMayLike/YouMayLike";
 import { Navigation, Pagination, Autoplay } from "swiper";
-// import Swiper and modules styles
+import noImage from "../../assets/noImage.jpg"
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaStar } from "react-icons/fa";
 import YouMayLike from "@/components/YouMayLike";
+import Image from "next/image";
 
 const Details = () => {
   const [product, setProduct] = useState([]);
@@ -57,9 +57,12 @@ const Details = () => {
                 ))}
               </Swiper>
             ) : (
-              <div className="text-center py-8 w-full h-full b">
-                No picture available
-              </div>
+              <Image
+              width={100}
+              height={70}
+              src={noImage}
+              className="  md:h-[300px] w-auto mx-auto mb-8  md:mb-12 "
+            />
             )}
           </div>
 

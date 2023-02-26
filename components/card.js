@@ -5,7 +5,7 @@ import { useState } from "react";
 import { NewInstance } from "../api/http";
 import Image from "next/image";
 import Link from "next/link";
-// import coming from "assets/images/coming.jpeg"
+import noImage from "../assets/noImage.jpg";
 
 const Card = (props) => {
   const [cat, setCat] = useState([]);
@@ -28,12 +28,17 @@ const Card = (props) => {
         {props.product.image[0]?.length > 0 ? (
           <img
             src={`${path}${props.product.image[0]}`}
-            // width={100}
-            // height={70}
             alt={props.product.name}
             className=" h-48 w-auto object-cover mx-auto transition ease-in-out duration-300 hover:filter  hover:grayscale hover:contrast-100"
           />
-        ) : null}
+        ) : (
+          <Image
+            width={100}
+            height={70}
+            src={noImage}
+            className=" h-48 w-auto object-cover mx-auto transition ease-in-out duration-300 hover:filter  hover:grayscale hover:contrast-100"
+          />
+        )}
       </div>
 
       <div id="nameAndIcon " className="flex justify-between">
