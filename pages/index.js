@@ -105,13 +105,13 @@ const Home = ({ popular, news, events }) => {
                 key={index++}
                 className="shadow-sm p-4 border border-gray-50 w-[310px] h-[300px] mx-auto "
               >
-                {/* <Image
+                <img
                   className="h-[200px] mx-auto hover:blur-[1px] "
                   src={`${path}${i.image}`}
                   alt={i.title}
-                  width={300}
-                  height={100}
-                /> */}
+                  // width={300}
+                  // height={100}
+                />
                 <div className="felx-col justifuy-between">
                   <p className="text-sm md:text-base text-[#7D2F2F]">
                     {i.title}

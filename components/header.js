@@ -11,7 +11,7 @@ import { CgMail } from "react-icons/cg";
 import { TiThMenu } from "react-icons/ti";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
-import { MdOutlineArrowRight } from "react-icons/md";
+import { MdArrowDropDown, MdOutlineArrowRight } from "react-icons/md";
 import { site, products } from "../server/api";
 import {
   achievementLogos,
@@ -287,11 +287,11 @@ const Header = () => {
           {/* EVENTS AND NEWS TOGGLE  */}
           {newsState && (
             <div className="shadow-inner">
-              <Link href={`${site}eventNewsPage`} className={eventsNew}>
+              <Link href={`${site}event-news`} className={eventsNew}>
                 Events
               </Link>
 
-              <Link href={`${site}eventNewsPage`} className={eventsNew}>
+              <Link href={`${site}event-news`} className={eventsNew}>
                 News
               </Link>
             </div>
@@ -350,7 +350,7 @@ const Header = () => {
               <div className={flexCenter}>
                 <div className={deskViewNavItems}>
                   {" "}
-                  PRODUCTS <span className={downArrow}> ⯆ </span>
+                  PRODUCTS <span > <MdArrowDropDown/> </span>
                 </div>
                 <div className="text-xs">BULK/FOOD SERVICE</div>
               </div>
@@ -387,7 +387,7 @@ const Header = () => {
               <div className={flexCenter}>
                 <div className={deskViewNavItems}>
                   {" "}
-                  PRODUCTS <span className={downArrow}> ⯆ </span>
+                  PRODUCTS <span > <MdArrowDropDown/> </span>
                 </div>
                 <div className="text-xs">PRIVATE LABEL</div>
               </div>
@@ -422,7 +422,7 @@ const Header = () => {
 
             <div className="m-2.5 group relative cursor-pointer  ">
               <div className={deskViewNavItems}>
-                ACHIEVEMENTS <span className={downArrow}> ⯆ </span>
+                ACHIEVEMENTS <span > <MdArrowDropDown/> </span>
               </div>
               <div className={achievementSubList}>
                 <Link href="#" className={achievementStyle}>
@@ -498,7 +498,7 @@ const Header = () => {
 
             <div className={navbarItemHover}>
               <div className={deskViewNavItems}>
-                BRANDS <span className={downArrow}> ⯆ </span>
+                BRANDS <span > <MdArrowDropDown/> </span>
               </div>
               <div className={brandsEventSubList}>
                 <Link href={`#`} className={brandMobileView}>
@@ -522,14 +522,14 @@ const Header = () => {
 
             <div className={navbarItemHover}>
               <div className={deskViewNavItems}>
-                EVENTS & NEWS <span className={downArrow}> ⯆ </span>
+                EVENTS & NEWS <span > <MdArrowDropDown/> </span>
               </div>
               <div className={brandsEventSubList}>
-                <Link href={`${site}eventNewsPage`} className={productStyle}>
+                <Link href={`${site}event-news`} className={productStyle}>
                   Events
                 </Link>
 
-                <Link href={`${site}eventNewsPage`} className={productStyle}>
+                <Link href={`${site}event-news`} className={productStyle}>
                   News
                 </Link>
               </div>
@@ -537,7 +537,7 @@ const Header = () => {
 
             <div className={navbarItemHover}>
               <div className={deskViewNavItems}>
-                ABOUT US <span className={downArrow}> ⯆ </span>
+                ABOUT US <span > <MdArrowDropDown/> </span>
               </div>
               <div className={navItemListSubList}>
                 <Link className={productStyle} href={`/info/about-us`}>

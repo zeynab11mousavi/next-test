@@ -12,7 +12,7 @@ const SideNavigation = () => {
             .then((res) => setSubcat(res.data))
     }, [])
     return (
-        <div id="shortNavigation" className="shadow-sm w-fit lg:w-[230px] mt-4 sticky left-0 top-0 h-fit p-6 ">
+        <div id="shortNavigation" className="shadow-sm w-fit lg:w-[230px] sticky left-0 top-0 h-fit p-6 ">
             {subcat?.map((item) => (
                 <div className="transition ease-in-out duration-300 hover:text-red-400 ">
                     <a href={`${site}products/${subcategory}/${item.id}`}>{item.name}</a>
