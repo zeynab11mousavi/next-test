@@ -21,12 +21,12 @@ const Footer = () => {
           id="socialMedia-icons"
           className="flex text-2xl lg:text-3xl "
         >
-          <a href="https://www.instagram.com/ahtfoods/" target="_blank">
+          <a href="https://www.instagram.com/ahtfoods/" target="_blank" rel="noreferrer">
             <FaInstagram className="mr-4 transition duration-300 ease-in-out hover:text-red-100" />
           </a>
           <a
             href="https://api.whatsapp.com/send/?phone=989123865564&text&type=phone_number&app_absent=0"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             <FaWhatsapp className="mr-4 transition duration-300 ease-in-out hover:text-red-100 " />
           </a>

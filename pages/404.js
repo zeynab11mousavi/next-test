@@ -4,12 +4,13 @@ import { useEffect } from "react";
 
 const NotFound = () => {
   const router = useRouter();
+  
 
   useEffect(() => {
     setTimeout(() => {
       router.push("/");
     }, 3000);
-  }, []);
+  }, [router]);
 
   return (
     <div

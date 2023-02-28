@@ -27,7 +27,7 @@ const SearchResult = () => {
             <p className="text-center text-xl md:text-2xl text-[#8A0019]">
               Your search result:
             </p>
-            <div className="  md:flex h-fit justify-center items-center">
+            <div className="md:flex h-fit justify-center items-center">
               {searchProducts?.map((product) => (
                 <Card product={product} key={product.id} />
               ))}
@@ -42,7 +42,7 @@ const SearchResult = () => {
             <div className="md:text-2xl text-center w-full p-4 text-[#8A0019]">
               <p>
                 {" "}
-                Sorry we didn't found any product with this name
+                Sorry we didn&apos;t found any product with this name
                 <br />
                 please make sure all letters are capital or the name is complete
               </p>

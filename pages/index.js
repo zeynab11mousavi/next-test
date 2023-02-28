@@ -63,8 +63,9 @@ const Home = ({ popular, news, events }) => {
         >
           {deskSlid?.map((slide, index = 0) => (
             <SwiperSlide key={`${index++}`}>
-              <div className="mt-16 md:mt-2">
+              <div className="mt-16 md:mt-2" key={index++}>
                 <Image
+                key={index++}
                   className="w-9/12 mx-auto hidden md:block"
                   src={deskSlid[index]}
                   alt="slider"
@@ -72,6 +73,7 @@ const Home = ({ popular, news, events }) => {
                   height={400}
                 />
                 <Image
+                key={index++}
                   className="w-9/12 mx-auto md:hidden"
                   src={phoneSlid[index]}
                   alt="slider"

@@ -37,7 +37,7 @@ const FQA = () => {
       <div className="text-[#7D2F2F]">
         <p className="text-2xl my-1 mt-8">Where are you located?</p>
         <p>
-          AHT's head office is in Tehran-Iran, we can supply our loyal customers
+          AHT&apos;s head office is in Tehran-Iran, we can supply our loyal customers
           from our worldwide offices as well. we have our marketing team in 5
           continents offering 24/7 online customer services.
         </p>
@@ -125,7 +125,7 @@ const FQA = () => {
           AHT is IFS, FSSC 22000, KOSHER, HALAL, ISO 9001:2008, ISO 22000: 2005,
           HACCP Certified and SEDEX member. We use a wide variety of brand new
           technology and machinery in our production line, While our valued
-          customers' feedback has always been effective in our success.
+          customers&apos; feedback has always been effective in our success.
         </p>
       </div>
 

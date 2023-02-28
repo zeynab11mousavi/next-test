@@ -2,7 +2,7 @@ import { NewInstance } from "@/api/http";
 import { api, events} from "@/config/api";
 import { useEffect, useState } from "react";
 
-const eventsSideNavigation = () => {
+const EventsSideNavigation = () => {
   const [eventsArr, setEventsArr] = useState([]);
 
   useEffect(() => {
@@ -20,9 +20,9 @@ const eventsSideNavigation = () => {
           </div>
           <div id="news" className="h-[300px] ">
             {(eventsArr.length > 0) ? eventsArr?.map((i, index = 0) => (
-                <>
+                <div key={index++}>
               <div
-                key={index++}
+                
                 className="flex w-[350px] h-[150px] border-b shadow-sm items-center px-2 py-4 m-4 md:m-0"
               >
                 <div className="  bg-[#7D2F2F] text-white w-16 h-16 text-center pt-2 m-2 rounded-lg">
@@ -40,7 +40,7 @@ const eventsSideNavigation = () => {
                   </p>
                 </div>
               </div>
-              </>
+              </div>
 
             )) : null }
           </div>
@@ -49,4 +49,4 @@ const eventsSideNavigation = () => {
   );
 };
 
-export default eventsSideNavigation;
+export default EventsSideNavigation;

@@ -11,16 +11,16 @@ const About = () => {
           most diverse Iranian IFS, FSSC 22000, KOSHER, HALAL certified and
           SEDEX member dried fruit and nuts supplier, is covering five
           continents with the most premium quality of Raisins, Sultanas, Dates
-          and Dates' products, Saffron, and Pistachios.
+          and Dates&apos; products, Saffron, and Pistachios.
         </div>
-        <Image width={1000} height={700} className="w-full md:w-3/12" src={aboutPic.one} alt="aht's award" />
+        <Image width={1000} height={700} className="w-full md:w-3/12" src={aboutPic.one} alt="aht award" />
       </div>
       <div className="w-full md:flex my-4 justify-around md:mt-8">
         <Image width={1000} height={700} className="w-full md:w-3/12" src={aboutPic.two} alt="aht" />
         <p className="w-full md:w-8/12 ">
           As part of our responsibility and commitments, we design safety and
           sustainability into our products and manufacturing processes. Handpick
-          products are going to be harvested at their best. Each AHT's supplied
+          products are going to be harvested at their best. Each AHT&apos;s supplied
           product goes through multiple stages of quality checks and ensures
           that only the best ones are available for end consumers. We maintain
           fully automated plants and factories with proper quality control
