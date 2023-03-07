@@ -3,6 +3,20 @@
 @tailwind utilities;
 
 
+input, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+#header-search-input{
+    padding: 0;
+}
+
 .lds-spinner {
   color: official;
   display: inline-block;
@@ -14,6 +28,8 @@
   transform-origin: 40px 40px;
   animation: lds-spinner 1.2s linear infinite;
 }
+
+
 .lds-spinner div:after {
   content: " ";
   display: block;

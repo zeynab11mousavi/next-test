@@ -486,7 +486,7 @@ const Header = () => {
                     alt={"K-STAR"}
                     className={achievementLogos}
                   />
-                  Korea Superconducting Tokamak Advanced Research
+                  K-STAR
                 </Link>
                 <Link href="#" className={achievementStyle}>
                   <Image src={FSSC} alt={"FSSC"} className={achievementLogos} />
@@ -577,6 +577,7 @@ const Header = () => {
             </div>
             <input
               value={search}
+              id="header-search-input"
               onChange={(e) => setSearch(e.target.value)}
               className={searchInputDesk}
               placeholder="Search Products..."
