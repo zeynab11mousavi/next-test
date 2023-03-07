@@ -2,10 +2,10 @@ import Image from "next/image";
 import qualityAndFoodSafety from "../../assets/qualityAndFoodSafety/qualityAndFoodSafety";
 const QualityAndFoodSafety = () => {
   return (
-    <div className="w-8/12 mx-auto my-8 md:mt-48 text-[#7D2F2F]">
-      <h3 className="text-lg md:text-2xl justify-between my-6 text-[#660100]">QUALITY & FOOD SAFETY</h3>
-      <div className="w-full md:flex items-center my-2 md:my-4">
-        <p className="md:w-8/12 mx-auto">
+    <div className="w-9/12 mx-auto my-8 md:mt-48 text-[#7D2F2F]">
+      <h3 className="text-lg md:text-2xl justify-between  my-6 text-[#660100]">QUALITY & FOOD SAFETY</h3>
+      <div className="w-full md:flex items-center my-2 md:my-16">
+        <p className="md:w-7/12 text-justify mx-auto">
           Investments in manpower, training, quality culture, research and
           development, plant, and equipment over the last 5 years has already
           resulted in a substantial increase in sales and the elimination of
@@ -27,13 +27,13 @@ const QualityAndFoodSafety = () => {
         />
       </div>
 
-      <div className="w-full md:flex justify-between items-center my-2 md:my-4">
+       <div className="w-full md:flex justify-between items-center my-2 md:my-16">
         <Image
           className=" h-64 mx-auto"
           src={qualityAndFoodSafety.two}
           alt="aht facility"
         />
-        <p className="md:w-8/12 mx-auto">
+        <p className="md:w-7/12 mx-auto text-justify">
           Future quality actions and trend analysis of corrective and preventive
           actions besides the several risks assessment on the process are all
           the basis of continuous improvement and our quality assurance
@@ -51,8 +51,8 @@ const QualityAndFoodSafety = () => {
           technical developments had helped us to be a pioneer.
         </p>
       </div>
-      <div className="w-full md:flex justify-between items-center my-2 md:my-4">
-        <p className="md:w-8/12 mx-auto">
+       <div className="w-full md:flex justify-between items-center my-2 md:my-16">
+        <p className="md:w-7/12 mx-auto text-justify">
           It’s important to us that we adequately address the needs of our
           clients and therefore, we must demonstrate our diligent compliance
           with legislation and good practice. This we achieve in the following
@@ -74,13 +74,13 @@ const QualityAndFoodSafety = () => {
         />
       </div>
 
-      <div className="w-full md:flex items-center my-2 md:my-4">
+       <div className="w-full md:flex items-center my-2 md:my-16">
         <Image
           className=" md:w-3/12 mx-auto"
           src={qualityAndFoodSafety.four}
           alt="aht facility"
         />
-        <p className="md:w-8/12 mx-auto">
+        <p className="md:w-7/12 mx-auto text-justify">
           At AHT Sahra Ruby Co. we believe that success depends on the supply of
           high-quality products that meet and exceed customer and consumer
           expectations of our brand products. Fundamental to this is the
@@ -96,8 +96,8 @@ const QualityAndFoodSafety = () => {
           reviewed regularly during each working shift startup.
         </p>
       </div>
-      <div className="w-full md:flex items-center my-2 md:my-4">
-        <p className="md:w-8/12 mx-auto">
+       <div className="w-full md:flex items-center my-2 md:my-16">
+        <p className="md:w-7/12 mx-auto text-justify">
           We are monitoring critical control points, related standards,
           procedures and methods to effectively manage food safety risks
           associated with changes in products, processes and technologies.
@@ -113,7 +113,7 @@ const QualityAndFoodSafety = () => {
           product.
         </p>
         <Image
-          className=" h-64 mx-auto"
+          className=" h-64 mx-auto ml-2"
           src={qualityAndFoodSafety.five}
           alt="aht facility"
         />
