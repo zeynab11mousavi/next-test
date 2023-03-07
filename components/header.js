@@ -235,8 +235,7 @@ const Header = () => {
                   alt={"K-STAR"}
                   className={achievementLogosMobileView}
                 />
-                Korea Superconducting Tokamak Advanced Research Food Safety
-                System Certification
+                K-STAR
               </Link>
               <Link href="#" className={achievementMobileView}>
                 <Image
