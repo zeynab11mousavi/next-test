@@ -3,8 +3,8 @@ import qualityAndFoodSafety from "../../assets/qualityAndFoodSafety/qualityAndFo
 const QualityAndFoodSafety = () => {
   return (
     <div className="w-9/12 mx-auto my-8 md:mt-48 text-[#7D2F2F]">
-      <h3 className="text-lg md:text-2xl justify-between  my-6 text-[#660100]">QUALITY & FOOD SAFETY</h3>
-      <div className="w-full md:flex items-center my-2 md:my-16">
+      <h3 className="text-lg md:text-2xl justify-between md:mx-8 my-6 text-[#660100]">QUALITY & FOOD SAFETY</h3>
+      <div className="w-full md:flex items-center my-4 md:mb-16">
         <p className="md:w-7/12 text-justify mx-auto">
           Investments in manpower, training, quality culture, research and
           development, plant, and equipment over the last 5 years has already
@@ -27,7 +27,7 @@ const QualityAndFoodSafety = () => {
         />
       </div>
 
-       <div className="w-full md:flex justify-between items-center my-2 md:my-16">
+       <div className="w-full md:flex justify-between items-center my-4 md:my-16">
         <Image
           className=" h-64 mx-auto"
           src={qualityAndFoodSafety.two}
@@ -51,7 +51,7 @@ const QualityAndFoodSafety = () => {
           technical developments had helped us to be a pioneer.
         </p>
       </div>
-       <div className="w-full md:flex justify-between items-center my-2 md:my-16">
+       <div className="w-full md:flex justify-between items-center my-4 md:my-16">
         <p className="md:w-7/12 mx-auto text-justify">
           It’s important to us that we adequately address the needs of our
           clients and therefore, we must demonstrate our diligent compliance
@@ -74,7 +74,7 @@ const QualityAndFoodSafety = () => {
         />
       </div>
 
-       <div className="w-full md:flex items-center my-2 md:my-16">
+       <div className="w-full md:flex items-center my-4 md:my-16">
         <Image
           className=" md:w-3/12 mx-auto"
           src={qualityAndFoodSafety.four}
@@ -96,7 +96,7 @@ const QualityAndFoodSafety = () => {
           reviewed regularly during each working shift startup.
         </p>
       </div>
-       <div className="w-full md:flex items-center my-2 md:my-16">
+       <div className="w-full md:flex items-center my-4 md:my-16">
         <p className="md:w-7/12 mx-auto text-justify">
           We are monitoring critical control points, related standards,
           procedures and methods to effectively manage food safety risks
