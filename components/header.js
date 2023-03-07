@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import Logo from "../assets/Logo.jpg";
@@ -12,7 +13,6 @@ import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import { MdArrowDropDown, MdOutlineArrowRight } from "react-icons/md";
 import { site, products } from "../server/api";
-import Image from "next/image";
 import {
   achievementLogos,
   achievementMobileView,
@@ -175,8 +175,6 @@ const Header = () => {
             <div className="shadow-inner">
               <Link href="#" className={achievementMobileView}>
                 <Image
-                  width={100}
-                  height={100}
                   src={IFS}
                   alt={"IFS"}
                   className={achievementLogosMobileView}
@@ -185,8 +183,6 @@ const Header = () => {
               </Link>
               <Link href="#" className={achievementMobileView}>
                 <Image
-                  width={100}
-                  height={100}
                   src={SEDEX}
                   alt={"SEDEX"}
                   className={achievementLogosMobileView}
@@ -195,8 +191,6 @@ const Header = () => {
               </Link>
               <Link href="#" className={achievementMobileView}>
                 <Image
-                  width={100}
-                  height={100}
                   src={KOSHER}
                   alt={"KOSHER CERTIFIED"}
                   className={achievementLogosMobileView}
@@ -205,8 +199,6 @@ const Header = () => {
               </Link>
               <Link href="#" className={achievementMobileView}>
                 <Image
-                  width={100}
-                  height={100}
                   src={USDA}
                   alt={"USDA ORGANIC"}
                   className={achievementLogosMobileView}
@@ -215,8 +207,6 @@ const Header = () => {
               </Link>
               <Link href="#" className={achievementMobileView}>
                 <Image
-                  width={100}
-                  height={100}
                   src={FDA}
                   alt={"Food and Drug Administration"}
                   className={achievementLogosMobileView}
@@ -225,8 +215,6 @@ const Header = () => {
               </Link>
               <Link href="#" className={achievementMobileView}>
                 <Image
-                  width={100}
-                  height={100}
                   src={ORGANIC}
                   alt={"ORGANIC"}
                   className={achievementLogosMobileView}
@@ -235,8 +223,6 @@ const Header = () => {
               </Link>
               <Link href="#" className={achievementMobileView}>
                 <Image
-                  width={100}
-                  height={100}
                   src={HALAL}
                   alt={"HALAL CERTIFIED"}
                   className={achievementLogosMobileView}
@@ -245,8 +231,6 @@ const Header = () => {
               </Link>
               <Link href="#" className={achievementMobileView}>
                 <Image
-                  width={100}
-                  height={100}
                   src={KSTAR}
                   alt={"K-STAR"}
                   className={achievementLogosMobileView}
@@ -255,8 +239,6 @@ const Header = () => {
               </Link>
               <Link href="#" className={achievementMobileView}>
                 <Image
-                  width={100}
-                  height={100}
                   src={FSSC}
                   alt={"FSSC"}
                   className={achievementLogosMobileView}
@@ -275,27 +257,19 @@ const Header = () => {
           {brand && (
             <div className="shadow-inner">
               <Link href={`#`} className={brandMobileView}>
-                <Image
-                  width={100}
-                  height={100} src={majestic} alt="majestic" className={brandImg} />
+                <Image src={majestic} alt="majestic" className={brandImg} />
                 MAJESTIC
               </Link>
               <Link href={`#`} className={brandMobileView}>
-                <Image
-                  width={100}
-                  height={100} src={peachFull} alt="peachFull" className={brandImg} />
+                <Image src={peachFull} alt="peachFull" className={brandImg} />
                 PEACH FULL
               </Link>
               <Link href={`#`} className={brandMobileView}>
-                <Image
-                  width={100}
-                  height={100} src={kindKids} alt="kindKids" className={brandImg} />
+                <Image src={kindKids} alt="kindKids" className={brandImg} />
                 KIND KIDS
               </Link>
               <Link href={`#`} className={brandMobileView}>
-                <Image
-                  width={100}
-                  height={100} src={queen} alt="queen" className={brandImg} />
+                <Image src={queen} alt="queen" className={brandImg} />
                 QUEEN DIAMOND
               </Link>
             </div>
@@ -352,8 +326,8 @@ const Header = () => {
                 className={productMobileView}>
                 R & D
               </a>
-              <a href={`/info/FQA`} className={productMobileView}>
-                FQA
+              <a href={`/info/FAQ`} className={productMobileView}>
+                FAQ
               </a>
               <a href={`/info/question-form`} className={productMobileView}>
                 Contact Us
@@ -365,7 +339,7 @@ const Header = () => {
 
       <nav className={navtailwindstyles}>
         <Link href={site}>
-          <Image  src={Logo} alt="AHT FOODS" className={logo} />
+          <Image src={Logo} alt="AHT FOODS" className={logo} />
         </Link>
 
         <div className={navItemDeskViewWrapper}>
@@ -452,8 +426,6 @@ const Header = () => {
               <div className={achievementSubList}>
                 <Link href="#" className={achievementStyle}>
                   <Image
-                    width={100}
-                  height={100}
                     src={IFS}
                     alt={"IFS"}
                     className="w-[45px] mx-auto mx-2"
@@ -462,8 +434,6 @@ const Header = () => {
                 </Link>
                 <Link href="#" className={achievementStyle}>
                   <Image
-                    width={100}
-                  height={100}
                     src={SEDEX}
                     alt={"SEDEX"}
                     className={achievementLogos}
@@ -472,8 +442,6 @@ const Header = () => {
                 </Link>
                 <Link href="#" className={achievementStyle}>
                   <Image
-                    width={100}
-                  height={100}
                     src={KOSHER}
                     alt={"KOSHER CERTIFIED"}
                     className={achievementLogos}
@@ -482,8 +450,6 @@ const Header = () => {
                 </Link>
                 <Link href="#" className={achievementStyle}>
                   <Image
-                    width={100}
-                  height={100}
                     src={USDA}
                     alt={"USDA ORGANIC"}
                     className={achievementLogos}
@@ -492,8 +458,6 @@ const Header = () => {
                 </Link>
                 <Link href="#" className={achievementStyle}>
                   <Image
-                    width={100}
-                  height={100}
                     src={FDA}
                     alt={"Food and Drug Administration"}
                     className={achievementLogos}
@@ -502,8 +466,6 @@ const Header = () => {
                 </Link>
                 <Link href="#" className={achievementStyle}>
                   <Image
-                    width={100}
-                  height={100}
                     src={ORGANIC}
                     alt={"ORGANIC"}
                     className={achievementLogos}
@@ -512,8 +474,6 @@ const Header = () => {
                 </Link>
                 <Link href="#" className={achievementStyle}>
                   <Image
-                    width={100}
-                  height={100}
                     src={HALAL}
                     alt={"HALAL CERTIFIED"}
                     className={achievementLogos}
@@ -522,8 +482,6 @@ const Header = () => {
                 </Link>
                 <Link href="#" className={achievementStyle}>
                   <Image
-                    width={100}
-                  height={100}
                     src={KSTAR}
                     alt={"K-STAR"}
                     className={achievementLogos}
@@ -531,9 +489,7 @@ const Header = () => {
                   K-STAR
                 </Link>
                 <Link href="#" className={achievementStyle}>
-                  <Image
-                    width={100}
-                  height={100} src={FSSC} alt={"FSSC"} className={achievementLogos} />
+                  <Image src={FSSC} alt={"FSSC"} className={achievementLogos} />
                   Food Safety System Certification
                 </Link>
               </div>
@@ -545,27 +501,19 @@ const Header = () => {
               </div>
               <div className={brandsEventSubList}>
                 <Link href={`#`} className={brandMobileView}>
-                  <Image
-                    width={100}
-                  height={100} src={majestic} alt="majestic" className={brandImg} />
+                  <Image src={majestic} alt="majestic" className={brandImg} />
                   MAJESTIC
                 </Link>
                 <Link href={`#`} className={brandMobileView}>
-                  <Image
-                    width={100}
-                  height={100} src={peachFull} alt="peachFull" className={brandImg} />
+                  <Image src={peachFull} alt="peachFull" className={brandImg} />
                   PEACH FULL
                 </Link>
                 <Link href={`#`} className={brandMobileView}>
-                  <Image
-                    width={100}
-                  height={100} src={kindKids} alt="kindKids" className={brandImg} />
+                  <Image src={kindKids} alt="kindKids" className={brandImg} />
                   KIND KIDS
                 </Link>
                 <Link href={`#`} className={brandMobileView}>
-                  <Image
-                    width={100}
-                  height={100} src={queen} alt="queen" className={brandImg} />
+                  <Image src={queen} alt="queen" className={brandImg} />
                   QUEEN DIAMOND
                 </Link>
               </div>
@@ -612,8 +560,8 @@ const Header = () => {
                   href={`/info/research-development`}>
                   R & D
                 </Link>
-                <Link className={productStyle} href={`/info/FQA`}>
-                  FQA
+                <Link className={productStyle} href={`/info/FAQ`}>
+                  FAQ
                 </Link>
                 <Link className={productStyle} href={`/info/question-form`}>
                   Contact Us
@@ -628,8 +576,8 @@ const Header = () => {
               <BiSearchAlt2 onClick={() => handleSearch()} />
             </div>
             <input
+            id="header-search-input"
               value={search}
-              id="header-search-input"
               onChange={(e) => setSearch(e.target.value)}
               className={searchInputDesk}
               placeholder="Search Products..."

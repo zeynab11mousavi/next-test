@@ -1,8 +1,12 @@
+import Head from "next/head";
 import Link from "next/link";
 
 const FQA = () => {
   return (
     <div className="w-8/12 mx-auto my-8 md:mt-48 text-gray-800 ">
+      <Head>
+        <title>AHT | FQA</title>
+      </Head>
       <div className="text-[#7D2F2F]">
         <p className="text-2xl my-1 mt-8">Why AHT?</p>
         <p>
@@ -37,9 +41,9 @@ const FQA = () => {
       <div className="text-[#7D2F2F]">
         <p className="text-2xl my-1 mt-8">Where are you located?</p>
         <p>
-          AHT&apos;s head office is in Tehran-Iran, we can supply our loyal customers
-          from our worldwide offices as well. we have our marketing team in 5
-          continents offering 24/7 online customer services.
+          AHT&apos;s head office is in Tehran-Iran, we can supply our loyal
+          customers from our worldwide offices as well. we have our marketing
+          team in 5 continents offering 24/7 online customer services.
         </p>
       </div>
 
@@ -143,8 +147,14 @@ const FQA = () => {
         </p>
       </div>
       <p className="text-[#7D2F2F]">
-        Didn’t find your doubts clarified here? Fill up this <Link href={`/info/question-form`} className="text-[#660100] font-semibold">Form</Link> for immediate
-        response.
+        Didn’t find your doubts clarified here? Fill up this{" "}
+        <Link
+          href={`/info/question-form`}
+          className="text-[#660100] font-semibold"
+        >
+          Form
+        </Link>{" "}
+        for immediate response.
       </p>
     </div>
   );

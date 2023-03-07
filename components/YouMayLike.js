@@ -12,9 +12,9 @@ const YouMayLike = () => {
         .then((res) => setProducts(res.data))
     }, [])
     return (             
-      <div id="popularWrapper" className="w-full md:p-8 ">
+    //   <div id="popularWrapper" className="w-full md:p-8 ">
 
-                <div className="md:flex justify-center items-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
 
 
                     {products?.map((product) => (
@@ -23,7 +23,7 @@ const YouMayLike = () => {
 
 
                 </div>
-            </div>
+            // </div>
             );
 }
  

@@ -12,6 +12,11 @@ import "swiper/css/pagination";
 import { FaStar } from "react-icons/fa";
 import YouMayLike from "@/components/YouMayLike";
 import { MdArrowDropDown } from "react-icons/md";
+import Link from "next/link";
+import Head from "next/head";
+import noImage from "../../assets/noImage.jpg";
+import Image from "next/image"
+
 
 const Details = () => {
   const [product, setProduct] = useState([]);
@@ -35,7 +40,10 @@ const Details = () => {
 
   return product.length > 0 ? (
     <div id="productPageWrapper" className="py-8 px-16 text-[#8A0019] md:mt-36">
-      {product[0].benefits.length > 50 ? (
+      <Head>
+        <title>AHT| Product</title>
+      </Head>
+      {product[0].benefits?.length > 50 ? (
         <>
           <div className="block md:flex justify-around  md:my-12">
             <div id="picAndIntro" className="md:flex  w-full md:w-8/12">
@@ -61,8 +69,9 @@ const Details = () => {
                     ))}
                   </Swiper>
                 ) : (
-                  <div className="text-center py-8 w-full h-full b">
-                    No picture available
+                  <div
+                  className="text-center py-8 w-full h-full b">
+                    <Image src={noImage} alt="no image is"/>
                   </div>
                 )}
               </div>
@@ -85,18 +94,18 @@ const Details = () => {
                 </div>
                 <div id="stars" className="text-yellow-300 flex my-2">
                   {" "}
-                  <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStar />{" "}
+                  <FaStar/> <FaStar/> <FaStar/> <FaStar/> <FaStar/>{" "}
                 </div>
 
                 {product[0].type === "bulk" && (
                   <div className="text-sm md:text-base my-2 font-semibold mb-4">
                     WANNA SEE OUR PACKAGES FOR {product[0].name}
                     <div>
-                      <a
-                        href={`${site}${products}/subcategory/pack/${product[0].subcategory}&type=retail`}
+                      <Link
+                        href={`${site}${products}/subcategory/${product[0].subcategory}&type=retail`}
                       >
                         click here
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 )}
@@ -132,9 +141,9 @@ const Details = () => {
                 </button>
               </p>
               <p className="hidden md:block">
-                {cat?.map((c) =>
+                {cat?.map((c, i=0) =>
                   c.id === Number(product[0].category) ? (
-                    <span>
+                    <span key={i++}>
                       {c.description ? c.description : "will update soon"}
                     </span>
                   ) : null
@@ -143,9 +152,9 @@ const Details = () => {
             </div>
             {about && (
               <p className=" md:hidden">
-                {cat?.map((c) =>
+                {cat?.map((c, i=0) =>
                   c.id === Number(product[0].category) ? (
-                    <span>
+                    <span key={i++}>
                       {c.description ? c.description : "will update soon"}
                     </span>
                   ) : null
@@ -168,9 +177,10 @@ const Details = () => {
                   pagination={{ clickable: true }}
                   style={{ padding: "" }}
                 >
-                  {product[0].image?.map((slide) => (
-                    <SwiperSlide key={`${slide}`}>
+                  {product[0].image?.map((slide, i=0) => (
+                    <SwiperSlide key={i++}>
                       <img
+                      key={i++}
                         className=" md:h-[300px] w-auto mx-auto mb-8  md:mb-12 "
                         src={`${path}${slide}`}
                         alt="slider"
@@ -180,7 +190,7 @@ const Details = () => {
                 </Swiper>
               ) : (
                 <div className="text-center py-8 w-full h-full b">
-                  No picture available
+                  <Image src={noImage}/>
                 </div>
               )}
             </div>
@@ -195,7 +205,7 @@ const Details = () => {
                   ) : null
                 )}
                 {"/ "}
-                {subcat?.map((s, i = 0) =>
+                {subcat?.map((s, i=0) =>
                   s.id === Number(product[0].subcategory) ? (
                     <span key={i++}>{s.name}</span>
                   ) : null
@@ -210,11 +220,11 @@ const Details = () => {
                 <div className="text-sm md:text-base my-2 font-semibold mb-4">
                   WANNA SEE OUR PACKAGES FOR {product[0].name}
                   <div>
-                    <a
-                      href={`${site}${products}/subcategory/pack/${product[0].subcategory}&type=retail`}
+                    <Link
+                      href={`${site}${products}/subcategory/${product[0].subcategory}&type=retail`}
                     >
                       click here
-                    </a>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -344,7 +354,7 @@ const Details = () => {
 
         {/* BENEFITS */}
 
-        {product[0].benefits.length > 50 ? (
+        {product[0].benefits?.length > 50 ? (
           <>
             <div id="benefits" className="py-4 w-8/12">
               <p className="md:p-2 text-sm md:text-lg font-semibold md:text-3xl">
@@ -434,7 +444,7 @@ const Details = () => {
         <div></div>
       </div>
       {/* YOU MAY ALSO LIKE */}
-      <p className="text-3xl md:text-[38px] text-[#660100] m-4">
+      <p className=" md:text-[38px] text-[#660100] m-4">
         You may also like
       </p>
       <YouMayLike />

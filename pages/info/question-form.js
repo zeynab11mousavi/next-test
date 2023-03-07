@@ -4,11 +4,11 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ReCAPTCHA from "react-google-recaptcha";
-import { MdEmail, MdLocationPin } from "react-icons/md";
+import Head from "next/head";
+import { MdLocationPin, MdEmail } from "react-icons/md";
 import { BsTelephone } from "react-icons/bs";
-import { FaWhatsapp } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
-import { FaFax } from "react-icons/fa";
+import { FaFax, FaWhatsapp } from "react-icons/fa";
 
 const QuestionForm = () => {
   const [name, setName] = useState();
@@ -44,8 +44,11 @@ const QuestionForm = () => {
   };
   return (
     <>
+      <Head>
+        <title>AHT | contact us</title>
+      </Head>
 
-<ToastContainer />
+      <ToastContainer />
 
       <div className="md:w-8/12 md:mt-48 text-center mx-auto px-6">
         <div className="w-[100%] my-4 text-2xl md:text-3xl text-gray-700">
@@ -67,8 +70,13 @@ const QuestionForm = () => {
           <div>
             <h3 className="text-large md:text-2xl text-gray-700"> Location:</h3>
             <p className="text-gray-500 my-2">
-              20 Mohri St., North Valiasr Ave.,Tehran 1966783661, Iran 
-              <a className="ml-2 text-gray-600" href="https://www.google.com/maps/place/AHT/@35.7864659,51.4160639,15z/data=!4m2!3m1!1s0x0:0xda421170d6e0be7c">GoogleMap</a>
+              20 Mohri St., North Valiasr Ave.,Tehran 1966783661, Iran
+              <a
+                className="ml-2 text-gray-600"
+                href="https://www.google.com/maps/place/AHT/@35.7864659,51.4160639,15z/data=!4m2!3m1!1s0x0:0xda421170d6e0be7c"
+              >
+                GoogleMap
+              </a>
             </p>
           </div>
         </div>
@@ -96,9 +104,9 @@ const QuestionForm = () => {
           <div>
             <h3 className="text-large md:text-2xl text-gray-700">Call:</h3>
             <p className="text-gray-500 my-2">
-              <a href="tell:+989121112867">(+98)  9121112867</a>
-              <br/>
-              <a href="tell:+982126217316-9">(+98 21)  26217316-9</a>
+              <a href="tell:+989121112867">(+98) 9121112867</a>
+              <br />
+              <a href="tell:+982126217316-9">(+98 21) 26217316-9</a>
             </p>
           </div>
         </div>
@@ -138,11 +146,17 @@ const QuestionForm = () => {
       </div>
 
       <form
-        onSubmit={(e) => handleSubmit(e)}
-        className=" rounded-md w-full md:w-8/12 py-16 mx-auto flex justify-center items-center"
+        // onSubmit={() => handleSubmit()}
+        action="mailto:zb.mv01@gmail.com"
+        method="post"
+        enctype="text/plain"
+        className=" rounded-md w-full md:w-8/12 py-16 mx-auto flex justify-center items-center md:mt-36"
       >
         <div className="w-8/12 ">
-        <p className="text-gray-700 md:text-lg">Please fill out the quick form and we will be in touch with lightning speed.</p>
+          <p className="text-gray-700 md:text-lg">
+            Please fill out the quick form and we will be in touch with
+            lightning speed.
+          </p>
           <div className="my-4">
             <input
               value={name}
@@ -196,13 +210,21 @@ const QuestionForm = () => {
             onChange={() => setActiveBtn(false)}
           />
 
-          <button
-            disabled={activeBtn}
+          <input
+            className="w-[50%] bg-red-50 p-4 rounded-md mx-auto transition my-4 duration-300 ease-in-out  text-gray-600 hover:text-gray-800"
             type="submit"
-            className="w-[45%] bg-red-50 p-4 rounded-md mx-auto transition my-4 duration-500 ease-in-out  text-gray-600 hover:text-gray-800"
+            value="Send"
+          />
+
+          {/* <button
+            disabled={activeBtn}
+        //     type="submit"
+        // onClick={(e) => handleSubmit(e)}
+
+            className="w-[50%] bg-gradient-to-l from-gray-200 to-white p-4 rounded-md mx-auto transition my-4 duration-300 ease-in-out  text-gray-600 hover:text-gray-800"
           >
             Submit
-          </button>
+          </button> */}
         </div>
       </form>
     </>

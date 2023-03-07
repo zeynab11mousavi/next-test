@@ -51,7 +51,8 @@ const Footer = () => {
               </p>
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
                 <a href="tell:+982126217320">
-                  (+98 21) 26217320 ext: 124 or 125
+                  (+98 21) 26217320
+                  <br/> ext: 124 or 125  
                 </a>
               </p>
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
@@ -77,7 +78,7 @@ const Footer = () => {
                 <a href={`/info/custom-packing`}>Custom Packing</a>
               </p>
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
-                <a href={`/info/FQA`}>FQA</a>
+                <a href={`/info/FAQ`}>FAQ</a>
               </p>
               <p className="my-2 transition duration-300 ease-in-out hover:text-red-100">
                 <a href={`/info/about-us`}>About Us</a>
@@ -123,7 +124,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="text-center py-4 text-xs md:text-sm lg:">
-        © AHT 2023    
+        © AHT 2023
       </p>
     </footer>
   );

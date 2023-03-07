@@ -4,16 +4,22 @@ import three from "../../assets/RandD/three.jpg";
 import four from "../../assets/RandD/four.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
+import Image from "next/image";
+
 // import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import React from "react";
+import Head from "next/head";
 
 const RandD = () => {
   const images = [one, two, three, four];
   return (
     <div className="w-8/12 mx-auto my-8 md:mt-48">
+      <Head>
+        <title>AHT | R&D</title>
+      </Head>
       <p className="text-2xl md:text-3xl my-6">RESEARCH & DEVELOPMENT</p>
       <div className="md:text-lg ">
         <p>
@@ -23,8 +29,9 @@ const RandD = () => {
         </p>
         <p>
           AHT is well-aware that giving greater priority to research and
-          development (R&D) investments will help to ensure our country&apos;s future
-          competitiveness and to pave the way for healthy food innovation.
+          development (R&D) investments will help to ensure our country&apos;s
+          future competitiveness and to pave the way for healthy food
+          innovation.
         </p>
         <p>
           People understand that food is a source of nourishment and
@@ -48,7 +55,8 @@ const RandD = () => {
         <p>
           Our R&D team takes important Steps toward Better food production which
           leads to healthier Life. Safety and at the same time deliciousness
-          based on superior quality-control technology is AHT&apos;s R&D main goal.
+          based on superior quality-control technology is AHT&apos;s R&D main
+          goal.
         </p>
       </div>
 
@@ -59,12 +67,13 @@ const RandD = () => {
           navigation
           autoplay={true}
           pagination={{ clickable: true }}
-          style={{ margin: "0 0 2rem 0" }}>
-          {images?.map((slide) => (
-            <React.Fragment>
-            <SwiperSlide key={`${slide}`}>
-              <img className="w-9/12 mx-auto" src={`${slide}`} alt="slider" />
-            </SwiperSlide>
+          style={{ margin: "0 0 2rem 0" }}
+        >
+          {images?.map((slide, i = 0) => (
+            <React.Fragment key={i++}>
+              <SwiperSlide key={`${slide}`}>
+                <Image  className="w-9/12 mx-auto" src={slide} alt="slider" />
+              </SwiperSlide>
             </React.Fragment>
           ))}
         </Swiper>

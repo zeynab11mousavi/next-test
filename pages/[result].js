@@ -14,7 +14,7 @@ const SearchResult = () => {
     NewInstance.get(`${api}${products}?name=${result}`).then((res) =>
       setProducts(res.data)
     );
-  }, [result]);
+  }, [result, searchProducts]);
 
   return (
     <div className="w-full min-h-screen flex justify-center mt-8 text-gray-700 md:mt-48 ">

@@ -2,6 +2,7 @@ import map from "../../assets/factories/map.jpg";
 import factories from "../../assets/factories/index.js";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Head from "next/head";
 
 const Factories = () => {
   const [images, setImage] = useState([]);
@@ -12,10 +13,15 @@ const Factories = () => {
 
   return (
     <div className="my-8 md:mt-48 text-lg w-full">
+      <Head>
+        <title>AHT | Factories</title>
+      </Head>
       <div className="w-10/12 mx-auto ">
         <div className="w-full  md:flex">
           <div className="w-full md:w-8/12">
-            <h1 className="tex-xl md:text-2xl mb-6 text-[#660100]">AHT FACTORIES</h1>
+            <h1 className="tex-xl md:text-2xl mb-6 text-[#660100]">
+              AHT FACTORIES
+            </h1>
             <div className="text-[#7D2F2F]">
               <p>
                 AHT as a well-trusted Iranian IFS, FSSC 22000, KOSHER, HALAL

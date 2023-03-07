@@ -2,14 +2,17 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
-import { Inter } from "@next/font/google";
+// import { Inter } from "@next/font/google";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import { api, site, path, products, category } from "config/api";
 import desktopSlider from "../assets/desktopSlider/index";
 import phoneSlider from "../assets/phoneSlider/index";
 import Card from "@/components/card";
-const inter = Inter({ subsets: ["latin"] });
+import YouMayLike from "@/components/YouMayLike";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+
+// const inter = Inter({ subsets: ["latin"] });
 
 //------------------------------------------------------ GET STATIC PROPS ----------------------------------------------------------------
 
@@ -37,8 +40,6 @@ export const getStaticProps = async () => {
   };
 };
 
-
-
 //--------------------------------------------COMPONENT--------------------------------------------//
 
 const Home = ({ popular, news, events }) => {
@@ -57,7 +58,7 @@ const Home = ({ popular, news, events }) => {
           modules={[Navigation, Pagination, Autoplay]}
           slidesPerView={1}
           navigation
-          autoplay={true}
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           style={{ margin: "0 0 2rem 0" }}
         >
@@ -65,7 +66,7 @@ const Home = ({ popular, news, events }) => {
             <SwiperSlide key={`${index++}`}>
               <div className="mt-16 md:mt-2" key={index++}>
                 <Image
-                key={index++}
+                  key={index++}
                   className="w-9/12 mx-auto hidden md:block"
                   src={deskSlid[index]}
                   alt="slider"
@@ -73,7 +74,7 @@ const Home = ({ popular, news, events }) => {
                   height={400}
                 />
                 <Image
-                key={index++}
+                  key={index++}
                   className="w-9/12 mx-auto md:hidden"
                   src={phoneSlid[index]}
                   alt="slider"
@@ -166,11 +167,9 @@ const Home = ({ popular, news, events }) => {
       <p className="text-3xl md:text-[38px] text-[#660100] m-4">POPULAR</p>
       {/* <YouMayLike /> */}
       <div id="popularWrapper" className="w-full md:p-8 ">
-        <div className="md:flex justify-center items-center">
-          {popular?.map((product) => (
-            <Card product={product} key={product.id} />
-          ))}
-        </div>
+        <AnimationOnScroll animateIn="animate__fadeInLeftBig">
+          <YouMayLike />
+        </AnimationOnScroll>
       </div>
     </>
   );
