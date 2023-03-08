@@ -6,8 +6,6 @@ import { NewInstance } from "../api/http";
 import Image from "next/image";
 import Link from "next/link";
 import noImage from "../assets/noImage.jpg";
-import "animate.css/animate.min.css";
-import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Card = (props) => {
   const [cat, setCat] = useState([]);
@@ -20,13 +18,12 @@ const Card = (props) => {
   }, []);
   return (
     // <AnimationOnScroll animateIn="animate__fadeInLeftBig">
-    <div className="card-container w-[250px] lg:w-[230px]">
-      <div className="whole-product-in-container w-full truncate transition ease-in-out duration-300 shadow my-4 mx-auto md:mx-2 p-4 text-[#660100] cursor-pointer">
+    <div className="card-container w-fit my-4 mx-auto md:mx-2">
+      <div className="whole-product-in-container  w-[250px] lg:w-[230px] truncate transition ease-in-out duration-300 shadow  p-4 text-[#660100] cursor-pointer">
         <Link href={`/products/${props.product.id}`}>
           <div
             href={`products/${props.product.id}`}
-            className="h-48 w-48 mb-4  mx-auto"
-          >
+            className="h-48 w-48 mb-4  mx-auto">
             {props.product.image[0]?.length > 0 ? (
               <>
                 <img
@@ -75,15 +72,25 @@ const Card = (props) => {
       {props.product.image[0]?.length > 0 ? (
         <>
           {props.product.image[1] ? (
-            <Link href={`/products/${props.product.id}`} className="middle w-full mx-auto">
-              <img src={`${path}${props.product.image[1]}`} />
+            <Link
+              href={`/products/${props.product.id}`}
+              className="middle w-full ">
+              <img
+                className=" rounded-md"
+                src={`${path}${props.product.image[1]}`}
+              />
               <button className="mx-auto text-red-500 text-2xl">
                 <CgEnter />
               </button>
             </Link>
           ) : (
-            <Link href={`/products/${props.product.id}`} className="middle w-full mx-auto ">
-              <img src={`${path}${props.product.image[0]}`} />
+            <Link
+              href={`/products/${props.product.id}`}
+              className="middle w-full  ">
+              <img
+                className=" rounded-md"
+                src={`${path}${props.product.image[0]}`}
+              />
               <button className="mx-auto text-red-500 text-2xl">
                 <CgEnter />
               </button>
@@ -91,7 +98,9 @@ const Card = (props) => {
           )}
         </>
       ) : (
-        <Link href={`/products/${props.product.id}`} className=" text-gray-700 ">
+        <Link
+          href={`/products/${props.product.id}`}
+          className=" text-gray-700 ">
           Go to product
           <button className="mx-auto text-red-500 text-2xl">
             <CgEnter />
