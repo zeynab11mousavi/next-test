@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @keyframes ahtLogo {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    #animated-logo {
+      animation-name: ahtLogo;
+      animation-duration: 50s;
+      animation-iteration-count: infinite;
+    }
+  </style>
+  <body>
+    <div
+      style="background-image: url(./three.jpg); width: 1250px; height: 650px"
+    >
+      <img
+        id="animated-logo"
+        src="./logo.JPG"
+        alt=""
+        style="position: absolute; top: 112px; left: 131px; border-radius: 100%"
+      />
+      <img
+        src="./insid.jpg"
+        alt=""
+        style="position: absolute; top: 224px; left: 248px; border-radius: 100%"
+      />
+    </div>
+  </body>
+</html>
